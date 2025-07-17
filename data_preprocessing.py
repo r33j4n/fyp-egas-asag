@@ -3,7 +3,7 @@ import json
 DATASET_SOURCE = 'Data/mohler_dataset_edited.csv'
 OUTPUT_PATH = 'Data/mohler_dataset_augmented.csv'
 JSON_OUTPUT_PATH = 'Data/mohler_dataset_augmented.json'
-JSON_PATH_TO_BE_BEAUTIFIED = 'Data/mohler_expanded_answer.json.txt'
+JSON_PATH_TO_BE_BEAUTIFIED = 'Data/mohler_expanded_answer.json'
 
 def augment_dataset(input_path, output_path):
     df = pd.read_csv(input_path)
@@ -52,7 +52,42 @@ def modify_and_beautify_json(json_path):
     except Exception as e:
         print(f"An error occurred while processing the JSON file: {e}")
 
+def merge_questions_with_topics(question_group_path, listed_topic_path, expanded_answer_path, output_path):
+    # Load question groups
+    with open(question_group_path, 'r') as file:
+        question_groups = json.load(file)
+
+    # Load listed topics
+    with open(listed_topic_path, 'r') as file:
+        listed_topics = json.load(file)
+
+    # Load expanded answers
+    with open(expanded_answer_path, 'r') as file:
+        expanded_answers = json.load(file)
+
+    # Create a mapping of question IDs to topics from listed topics
+    id_to_topics = {item['id']: item['topics'] for item in listed_topics}
+
+    # Merge topics into expanded answers
+    for answer in expanded_answers:
+        qid = answer['id']
+        answer['topics'] = id_to_topics.get(qid, [])
+
+    # Save the merged data
+    with open(output_path, 'w') as file:
+        json.dump(expanded_answers, file, indent=4)
+
+    print(f"Merged data saved to {output_path}")
+
 augment_dataset(DATASET_SOURCE, OUTPUT_PATH)
 csv_to_json(OUTPUT_PATH, JSON_OUTPUT_PATH)
 beautify_json(JSON_PATH_TO_BE_BEAUTIFIED)
 modify_and_beautify_json(JSON_PATH_TO_BE_BEAUTIFIED)
+
+merge_questions_with_topics(
+    'Data/question_group.json',
+    'Data/listed_topic.json',
+    'Data/mohler_expanded_answer.json',
+    'Data/mohler_merged_questions.json'
+)
+

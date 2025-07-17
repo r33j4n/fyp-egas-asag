@@ -20,3 +20,4 @@
 .idea/vcs.xml
 # Skip project specific files
 .idea/scopes/
+.idea/*
