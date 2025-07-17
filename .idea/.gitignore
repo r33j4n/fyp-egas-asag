@@ -1,0 +1,22 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+#Skip idea files
+.idea/misc.xml
+# Skip run configurations
+.idea/runConfigurations/
+# Skip workspace.xml
+.idea/workspace.xml
+# Skip project specific files
+.idea/modules.xml
+# Skip project specific files
+.idea/inspectionProfiles/
+# Skip project specific files
+.idea/vcs.xml
+# Skip project specific files
+.idea/scopes/
