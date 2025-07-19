@@ -90,4 +90,23 @@ merge_questions_with_topics(
     'Data/mohler_expanded_answer.json',
     'Data/mohler_merged_questions.json'
 )
+#remove timestamp from the merged questions
+def remove_timestamp_from_merged_questions(merged_questions_path):
+    with open(merged_questions_path, 'r') as file:
+        data = json.load(file)
+    for item in data:
+        if 'timestamp' in item:
+            del item['timestamp']
+    with open(merged_questions_path, 'w') as file:
+        json.dump(data, file, indent=4)
+    print(f"Timestamp removed from {merged_questions_path}")
+
+#json to csv
+def json_to_csv(json_path, csv_path):
+    df = pd.read_json(json_path, orient='records')
+    df.to_csv(csv_path, index=False)
+    print(f"CSV file saved to {csv_path}")
+
+remove_timestamp_from_merged_questions('Data/mohler_merged_questions.json')
+json_to_csv('Data/mohler_merged_questions.json', 'Data/mohler_merged_questions.csv')
 

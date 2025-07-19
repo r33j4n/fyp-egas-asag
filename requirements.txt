@@ -5,4 +5,14 @@ matplotlib>=3.8.0
 seaborn>=0.13.0
 langchain>=0.1.20
 langgraph>=0.0.30
-
+neo4j==5.28.1
+langchain
+langchain-neo4j
+openai
+langchain_experimental~=0.3.4
+Flask~=3.1.1
+langchain-core~=0.3.69
+dotenv~=0.9.9
+python-dotenv~=1.1.1
+langchain-community~=0.3.27
+langchain_groq

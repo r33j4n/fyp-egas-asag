@@ -4,7 +4,6 @@
         "question": "What is the role of a prototype program in problem solving?",
         "desired_answer": "To simulate the behaviour of portions of the desired software product.",
         "expanded_answer": "A prototype program is a simplified early version of an intended software system that simulates key features or functionality of the final product. It is used in the early stages of problem solving and development to explore ideas, validate requirements, and get feedback from users. By testing a prototype, developers and stakeholders can identify flaws or misunderstandings in the design and refine the solution before full-scale implementation. This approach reduces development risk and helps ensure the final software meets users\u2019 needs.",
-        "timestamp": "2025-07-18T00:36:04.882045",
         "topics": [
             "SW_Process"
         ]
@@ -14,7 +13,6 @@
         "question": "What stages in the software life cycle are influenced by the testing stage?",
         "desired_answer": "The testing stage can influence both the coding stage (phase 5) and the solution refinement stage (phase 7)",
         "expanded_answer": "In the software development life cycle, the testing stage can have feedback effects on both earlier and later phases. Bugs or issues discovered during testing often send developers back to the coding phase to fix defects or adjust the implementation. Testing outcomes can also inform the solution refinement or maintenance phase, where the overall solution is improved or fine-tuned based on test results. Thus, testing not only validates the software but also influences ongoing development and future refinements of the system.",
-        "timestamp": "2025-07-18T00:36:04.882051",
         "topics": [
             "SW_Process"
         ]
@@ -24,7 +22,6 @@
         "question": "What are the main advantages associated with object-oriented programming?",
         "desired_answer": "Abstraction and reusability.",
         "expanded_answer": "Object-oriented programming (OOP) offers several advantages that improve software design and maintainability. One major benefit is abstraction, which allows programmers to manage complexity by modeling real-world entities and hiding unnecessary implementation details behind clean interfaces. This goes hand-in-hand with encapsulation, where data and related behaviors are bundled into classes, helping protect the internal state of objects and reduce system complexity. Another significant advantage is reusability: OOP allows developers to reuse and extend existing code through class inheritance and polymorphism, rather than writing code from scratch. These principles make OOP systems more modular, easier to maintain, and adaptable to new requirements.",
-        "timestamp": "2025-07-18T00:36:04.882052",
         "topics": [
             "OOP"
         ]
@@ -34,7 +31,6 @@
         "question": "Where do C++ programs begin to execute?",
         "desired_answer": "At the main function.",
         "expanded_answer": "In a C++ program, execution always begins at the main function. The main function serves as the entry point of the program and is automatically called by the runtime or operating system when the program starts. No matter how many other functions are defined, only main is invoked to initiate the program\u2019s logic. From main, the program can call other functions and create objects as needed, but the flow of control always originates from this starting function.",
-        "timestamp": "2025-07-18T00:36:04.882053",
         "topics": [
             "Program_Structure"
         ]
@@ -44,7 +40,6 @@
         "question": "Where are variables declared in a C++ program?",
         "desired_answer": "Variables can be declared anywhere in a program. They can be declared inside a function (local variables) or outside the functions (global variables)",
         "expanded_answer": "In C++, variables can be declared in various places depending on the needed scope. Most commonly, variables are declared inside functions or blocks, making them local variables that exist only within that function or block. Variables can also be declared outside of any function, at the global scope, which makes them global variables accessible throughout the program (or within the file) after their declaration. C++ allows declarations at the point of first use, so programmers often declare a variable right before it is needed to limit its scope and improve code clarity.",
-        "timestamp": "2025-07-18T00:36:04.882054",
         "topics": [
             "Variables_Scope_Storage",
             "Program_Structure"
@@ -55,7 +50,6 @@
         "question": "What is the main difference between a while and a do...while statement?",
         "desired_answer": "The block inside a do...while statement will execute at least once.",
         "expanded_answer": "A while loop and a do...while loop are both used for repetition, but they differ in when the loop\u2019s condition is evaluated. In a while loop (a pre-test loop), the condition is checked first, so if the condition is false initially, the loop\u2019s body may not execute at all. In contrast, a do...while loop (a post-test loop) executes its body first and then checks the condition at the end of each iteration. This means that the block inside a do...while will always execute at least once, regardless of whether the loop condition is true or false at the start.",
-        "timestamp": "2025-07-18T00:36:04.882055",
         "topics": [
             "Control_Flow"
         ]
@@ -65,7 +59,6 @@
         "question": "What is typically included in a class definition?",
         "desired_answer": "Data members (attributes) and member functions.",
         "expanded_answer": "A class definition in object-oriented programming typically consists of two primary components: data members and member functions. Data members (also known as attributes or fields) are variables that hold the state or properties of an object. Member functions (also known as methods) are the functions that define the behaviors or operations the object can perform, often manipulating the object\u2019s data members. Together, these elements allow a class to encapsulate both information (through its data members) and functionality (through its member functions) in a single unit.",
-        "timestamp": "2025-07-18T00:36:04.882056",
         "topics": [
             "OOP"
         ]
@@ -75,7 +68,6 @@
         "question": "What is the difference between a data member and a local variable inside a member function?",
         "desired_answer": "Data members can be accessed from any member functions inside the class defintion. Local variables can only be accessed inside the member function that defines them.",
         "expanded_answer": "Within a class, a data member (attribute) is a variable that is part of each object and can be accessed by any of the class\u2019s member functions. In contrast, a local variable declared inside a member function exists only within that function\u2019s scope and lifetime, meaning it is created when the function is called and destroyed when the function returns. Data members represent the persistent state of an object and are shared by all methods of the class (each method can use them as needed), whereas a local variable is temporary and private to that single function call. In summary, data members and local variables differ in their scope (who can access them) and their lifetime (how long they exist).",
-        "timestamp": "2025-07-18T00:36:04.882058",
         "topics": [
             "OOP",
             "Variables_Scope_Storage"
@@ -86,7 +78,6 @@
         "question": "What is the difference between a constructor and a function?",
         "desired_answer": "A constructor is called whenever an object is created, whereas a function needs to be called explicitely. Constructors do not have return type, but functions have to indicate a return type.",
         "expanded_answer": "In C++, a constructor is a special member function of a class that is automatically called whenever an object of that class is created. In contrast, a normal function (or method) only executes when it is explicitly called in the code. Another key difference is that constructors do not have a return type (not even void) because their purpose is to initialize the object, whereas ordinary functions must declare a return type and may return a value. In essence, a constructor sets up an object\u2019s initial state upon creation, while other functions define behaviors or operations that can be invoked on the object during its lifetime.",
-        "timestamp": "2025-07-18T00:36:04.882059",
         "topics": [
             "OOP",
             "Functions"
@@ -97,7 +88,6 @@
         "question": "When does C++ create a default constructor?",
         "desired_answer": "If no constructor is provided, the compiler provides one by default. If a constructor is defined for a class, the compiler does not create a default constructor.",
         "expanded_answer": "In C++, the compiler will automatically generate a default constructor (a constructor with no parameters) for a class only if no constructors have been explicitly defined by the programmer. This implicit default constructor simply default-initializes the members and bases of the class. However, if you provide any constructor for the class (such as a parameterized constructor), the compiler will not create a default constructor. In that case, if a no-argument constructor is needed, the programmer must define it explicitly.",
-        "timestamp": "2025-07-18T00:36:04.882060",
         "topics": [
             "OOP"
         ]
@@ -107,7 +97,6 @@
         "question": "What is the difference between a function prototype and a function definition?",
         "desired_answer": "A function prototype includes the function signature, i.e., the name of the function, the return type, and the parameters' type. The function definition includes the actual body of the function.",
         "expanded_answer": "In C++ (and C), a function prototype is a declaration of a function that specifies the function\u2019s signature\u2014its name, return type, and parameter types\u2014without providing the implementation. The prototype (often placed in a header file or before the function is used) informs the compiler about the function\u2019s interface so that it can be called or referenced even before its full definition appears. A function definition, in contrast, includes the actual function body: the block of code that defines what the function does when it is called. In summary, the function prototype is just an interface specification, whereas the function definition provides the complete implementation of the function.",
-        "timestamp": "2025-07-18T00:36:04.882060",
         "topics": [
             "Functions",
             "Program_Structure"
@@ -118,7 +107,6 @@
         "question": "What is the role of a header-file?",
         "desired_answer": "To store a class interface, including data members and member function prototypes.",
         "expanded_answer": "In C++ programming, a header file is used to declare the interface of code components (such as classes, functions, constants) without containing their full implementation. For example, a class\u2019s header file typically contains the class definition: it lists the data members (attributes) and declares the member function prototypes (signatures) of the class, but not the function bodies. By including this header in different source files, the program\u2019s modules know about the class or function interfaces, which promotes a clear separation between interface and implementation. In summary, the header file\u2019s role is to provide these declarations for others to use, while the actual code logic is written in a corresponding implementation (source) file.",
-        "timestamp": "2025-07-18T00:36:04.882061",
         "topics": [
             "OOP",
             "Program_Structure"
@@ -129,10 +117,8 @@
         "question": "What does a function signature include?",
         "desired_answer": "The name of the function and the types of the parameters.",
         "expanded_answer": "In programming, a function\u2019s signature is defined by the function\u2019s name together with its parameter list (the number and types of its parameters). This signature uniquely identifies the function for the compiler when determining which function to call, especially in contexts where function overloading is used. Importantly, in languages like C++, the return type is not considered part of the function signature for overload resolution, meaning you cannot have two functions that differ only by return type. Thus, a function signature typically includes only the function name and its parameter types (and their order).",
-        "timestamp": "2025-07-18T00:36:04.882062",
         "topics": [
-            "Functions",
-            "Program_Structure"
+            "Functions"
         ]
     },
     {
@@ -140,7 +126,6 @@
         "question": "What is the scope of global variables?",
         "desired_answer": "File scope.",
         "expanded_answer": "Global variables have a scope that extends across the entire program file (translation unit) from the point of their declaration onward. This means that once a global variable is declared (outside of any function), it can be accessed by any code in that file after its declaration, including inside functions or other blocks. If the global variable is declared with external linkage (the default for global variables unless marked static in C++), it can even be accessed from other files (via an extern declaration) making it effectively program-wide. In short, the scope of a global variable is the whole file (and potentially the whole program), unlike local variables which are confined to their function or block.",
-        "timestamp": "2025-07-18T00:36:04.882063",
         "topics": [
             "Variables_Scope_Storage",
             "Program_Structure"
@@ -151,7 +136,6 @@
         "question": "How does the compiler handle inline functions?",
         "desired_answer": "It makes a copy of the function code in every place where a function call is made.",
         "expanded_answer": "When a function is declared as inline (for example, using the inline keyword or defining it inside a class), the compiler attempts to handle calls to that function by substituting the function\u2019s code directly at each call site. Instead of generating the usual function call and return sequence, the compiler effectively copies the body of the inline function into the caller\u2019s code wherever the function is invoked. This eliminates the overhead of a function call (no jump to a separate location and no stack operations for the call), which can improve performance for small, frequently called functions. However, inlining a function can also increase the compiled code size because the function\u2019s code is duplicated at each call location.",
-        "timestamp": "2025-07-18T00:36:04.882063",
         "topics": [
             "Functions",
             "Performance_Analysis"
@@ -162,7 +146,6 @@
         "question": "What is the main advantage associated with function arguments that are passed by reference?",
         "desired_answer": "It avoids making copies of large data structures when calling functions.",
         "expanded_answer": "Passing function arguments by reference means the function receives a reference (or alias) to the original data rather than a copy of it. The main advantage of this approach is that it avoids creating copies of potentially large data structures when calling a function, which can significantly improve performance in terms of both speed and memory usage. Without the overhead of copying, the function can operate directly on the original object or data, resulting in more efficient code. Additionally, if desired, any changes made to an argument passed by reference will affect the original variable in the caller, since the function is working with the original data itself.",
-        "timestamp": "2025-07-18T00:36:04.882064",
         "topics": [
             "Functions",
             "Memory_Pointers",
@@ -174,7 +157,6 @@
         "question": "How are overloaded functions differentiated by the compiler?",
         "desired_answer": "Based on the function signature. When an overloaded function is called, the compiler will find the function whose signature is closest to the given function call.",
         "expanded_answer": "In C++, overloaded functions share the same name but must have different parameter lists, so the compiler differentiates them by their function signatures (the number and types of their parameters). When an overloaded function is called, the compiler looks at the types and number of arguments provided in the call and tries to match them to one of the defined overloads. It selects the function whose parameter types most closely match the arguments passed (using exact type matches or the smallest necessary conversions, based on C++ overload resolution rules). Once the best match is determined, the compiler binds the call to that specific function implementation, thereby executing the correct overloaded function.",
-        "timestamp": "2025-07-18T00:36:04.882065",
         "topics": [
             "Functions"
         ]
@@ -184,7 +166,6 @@
         "question": "When defining a recursive function, what are possible causes for infinite recursion?",
         "desired_answer": "If the recursion step is defined incorrectly, or if the base case is not included.",
         "expanded_answer": "When defining a recursive function, there are a couple of common issues that can cause it to enter an infinite recursion. One problem is not having a correct or reachable base case (termination condition); if the function never encounters a valid base case, it will keep calling itself without end. Another issue is a mistake in the recursive step, such as not reducing the problem size or state correctly on each call (for example, calling itself with the same or an invalid value), which means the recursion never progresses toward termination. In short, missing or improper base cases and incorrectly defined recursive steps are typical causes of a recursive function never stopping.",
-        "timestamp": "2025-07-18T00:36:04.882066",
         "topics": [
             "Recursion",
             "Control_Flow"
@@ -195,7 +176,6 @@
         "question": "What are the similarities between iteration and recursion?",
         "desired_answer": "They both involve repetition; they both have termination tests; they can both occur infinitely.",
         "expanded_answer": "Iteration and recursion are two techniques for achieving repetition in algorithms, and they share several similarities. Both involve executing a set of instructions multiple times: iteration does so through loop constructs (such as for or while loops), whereas recursion does so through repeated function calls. In both cases, a termination condition is essential (a loop has a condition that eventually fails, and a recursive function has a base case) to ensure that the process ends. If the stopping condition is missing or never met, either approach can lead to an infinite loop or infinite recursion, meaning the repetition would continue indefinitely.",
-        "timestamp": "2025-07-18T00:36:04.882066",
         "topics": [
             "Recursion",
             "Control_Flow"
@@ -206,7 +186,6 @@
         "question": "What is the main difference between strings declared using the type string versus strings declared using an array of characters?",
         "desired_answer": "The strings declared using an array of characters have a null element added at the end of the array.",
         "expanded_answer": "In C++, you can represent text using either the std::string class or a low-level array of characters, and there is a key difference between the two. A string defined as an array of characters (a C-style string) must have a special null character \\0 at the end of the array to indicate where the string terminates. By contrast, an std::string (from the C++ standard library) manages its contents internally and keeps track of its own length, automatically handling the null terminator behind the scenes. This means that when you use a char array as a string you need to manually ensure it is null-terminated, whereas std::string provides a more convenient abstraction where such details are taken care of for you.",
-        "timestamp": "2025-07-18T00:36:04.882067",
         "topics": [
             "Strings",
             "Arrays",
@@ -218,7 +197,6 @@
         "question": "How are arrays passed to functions?",
         "desired_answer": "by reference.",
         "expanded_answer": "When an array is passed to a function in C or C++, it is effectively passed by reference. Under the hood, the array name in a function call actually decays to a pointer to the array\u2019s first element, so the function parameter receives the memory address of the original array\u2019s data. This means the function can directly access and modify the elements of the array in the caller\u2019s memory rather than working on a separate copy. As a result, any changes made to the array elements inside the function will be reflected in the original array after the function call returns.",
-        "timestamp": "2025-07-18T00:36:04.882068",
         "topics": [
             "Arrays",
             "DataStructures",
@@ -230,7 +208,6 @@
         "question": "What is the difference between an array declared as static, and one that is not?",
         "desired_answer": "The arrays declared as static live throughout the life of the program; that is, they are initialized only once, when the function that declares the array it is first called.",
         "expanded_answer": "In C/C++, declaring an array as static (for example, as a static local variable inside a function) gives it static storage duration, meaning it exists for the lifetime of the program rather than being created and destroyed on each function call. A static array is initialized only once (usually when the program starts or when the code first executes that declaration) and it retains its values between multiple calls to the function. In contrast, an array that is not static (an automatic local array) is allocated and initialized every time the function is called and is destroyed when the function returns. Thus, the static array persists and maintains its state across calls, whereas a non-static array is re-created and re-initialized afresh during each invocation of the function.",
-        "timestamp": "2025-07-18T00:36:04.882069",
         "topics": [
             "Arrays",
             "Variables_Scope_Storage",
@@ -242,7 +219,6 @@
         "question": "How many dimensions need to be specified when passing a multi-dimensional array as an argument to a function?",
         "desired_answer": "All the dimensions, except the first one.",
         "expanded_answer": "In C/C++, when passing a multi-dimensional array to a function using array syntax, you need to specify the sizes of all dimensions except for the first. The first dimension is not required in the function\u2019s parameter list because the array will decay to a pointer to its first element (which is a sub-array), but the compiler must know the lengths of the remaining dimensions to index the array correctly. For instance, if you have a two-dimensional array, you might declare the function parameter as int matrix[][10] for an array with 10 columns, leaving the first dimension unspecified. In general, all subsequent dimensions after the first must be explicitly stated in the function prototype so the function understands the layout of the multi-dimensional array.",
-        "timestamp": "2025-07-18T00:36:04.882069",
         "topics": [
             "Arrays",
             "DataStructures"
@@ -253,7 +229,6 @@
         "question": "In one sentence, what is the main idea implemented by insertion sort?",
         "desired_answer": "Taking one array element at a time, from left to right, it inserts it in the right position among the already sorted elements on its left.",
         "expanded_answer": "Insertion sort is a simple sorting algorithm that builds the final sorted list (or array) one element at a time. The main idea is to iterate through the array and, for each element (starting from the second one), insert it into the correct position among the elements to its left, which are already sorted. Initially, the first element by itself is considered sorted; for each subsequent element, the algorithm compares it with the sorted portion on its left, shifting larger elements one position to the right until the proper spot for the new element is found. By repeatedly taking the next unsorted element and inserting it into the sorted portion, the left side of the array grows in sorted order until the entire array becomes sorted.",
-        "timestamp": "2025-07-18T00:36:04.882070",
         "topics": [
             "Algorithms",
             "Algorithms_Sorting",
@@ -265,7 +240,6 @@
         "question": "In one sentence, what is the main idea implemented by selection sort?",
         "desired_answer": "Taking one array element at a time, from left to right, it identifies the minimum from the remaining elements and swaps it with the current element.",
         "expanded_answer": "Selection sort is a sorting technique that repeatedly finds the smallest element in the unsorted portion of the array and moves it into its correct position in the sorted portion. The algorithm maintains a sorted section at the beginning (left side) of the array and an unsorted section for the rest. At each iteration, it scans the unsorted part to identify the minimum value, then swaps that minimum element with the first element of the unsorted section (effectively expanding the sorted section by one). By doing this systematically for each index\u2014from the first position to the last\u2014the array becomes sorted by the time the algorithm finishes.",
-        "timestamp": "2025-07-18T00:36:04.882071",
         "topics": [
             "Algorithms",
             "Algorithms_Sorting"
@@ -276,7 +250,6 @@
         "question": "What is the number of operations for insertion sort under a best-case scenario, and what is the best-case scenario?",
         "desired_answer": "N (the length of the array) operations achieved for a sorted array.",
         "expanded_answer": "Insertion sort\u2019s best-case performance occurs when the array is already sorted in ascending order (or whatever the target order is). In this best-case scenario, the algorithm runs in linear time, meaning it will perform on the order of N operations for an array of length N. This is because for each element (beyond the first) insertion sort finds that the element is already in the correct position relative to those before it, requiring only one comparison and no shifts to insert it. Thus, a sorted array is the best-case input for insertion sort, yielding approximately N basic operations to complete the sort.",
-        "timestamp": "2025-07-18T00:36:04.882072",
         "topics": [
             "Algorithms",
             "Algorithms_Sorting",
@@ -288,7 +261,6 @@
         "question": "What is the base case for a recursive implementation of merge sort?",
         "desired_answer": "When the size of the array to be sorted is 1 (or 2)",
         "expanded_answer": "In a recursive merge sort, the base case is reached when the segment of the array to be sorted has only one element (or at most a couple of elements). At that point, the sub-array is so small that it is already sorted by definition\u2014a single element is trivially sorted (and a pair of elements can be sorted with just one comparison or swap if needed). When the recursion reaches an array size of 1 (or 2), the algorithm stops dividing that portion further and can begin merging, since these minimal pieces are considered sorted. Thus, the base case for merge sort is typically a sub-array of length one, which requires no further recursive processing.",
-        "timestamp": "2025-07-18T00:36:04.882072",
         "topics": [
             "Algorithms",
             "Algorithms_Sorting",
@@ -301,7 +273,6 @@
         "question": "What does the address (&) operator return?",
         "desired_answer": "The memory address of its operand.",
         "expanded_answer": "In C/C++, the address-of operator & returns the memory address of its operand. For example, if you have a variable x, then &x evaluates to a pointer that represents the location in memory where x is stored. The value produced by & is of a pointer type (if x is an int, then &x is of type int*, meaning a pointer to an integer) and it holds the address of the variable. Using the & operator is how a program can obtain a pointer to a specific variable, which can then be used for indirect access or passed to functions expecting an address.",
-        "timestamp": "2025-07-18T00:36:04.882073",
         "topics": [
             "Memory_Pointers"
         ]
@@ -311,7 +282,6 @@
         "question": "How can an array be addressed in pointer/offset notation?",
         "desired_answer": "By initializing a pointer to point to the first element of the array, and then incrementing this pointer with the index of the array element.",
         "expanded_answer": "In C/C++, an array can be accessed using pointer arithmetic (pointer/offset notation) instead of the typical bracket notation. The process is to first get a pointer to the first element of the array (for example, int *p = array; or using &array[0]), and then use that pointer with an offset. To access the element at index i, you increment the pointer by i and dereference it: for instance, *(p + i) yields the value of array[i]. This pointer/offset notation is equivalent to the standard array indexing (array[i] is defined to be the same as *(array + i)), demonstrating how arrays and pointers are closely related in these languages.",
-        "timestamp": "2025-07-18T00:36:04.882074",
         "topics": [
             "Memory_Pointers",
             "Arrays",
@@ -323,7 +293,6 @@
         "question": "What does the sizeof operator return?",
         "desired_answer": "The size in bytes of its operand.",
         "expanded_answer": "In C/C++, the sizeof operator returns the size (in bytes) of its operand, which can be either a data type or a particular variable/expression. For example, sizeof(int) might yield 4 on a system where an int is 4 bytes, and sizeof(arr) (for an array variable arr) would give the total number of bytes used by that array. The value produced by sizeof is of type size_t and is a compile-time constant when applied to a type or to a fixed-size object, which is useful for determining memory allocation or understanding how much space a type occupies. In summary, sizeof(x) evaluates to the number of bytes of memory that the object or type x requires.",
-        "timestamp": "2025-07-18T00:36:04.882075",
         "topics": [
             "Memory_Pointers",
             "Performance_Analysis"
@@ -334,7 +303,6 @@
         "question": "What are the different ways to pass a pointer to a function?",
         "desired_answer": "There are four ways: nonconstant pointer to constant data, nonconstant pointer to nonconstant data, constant pointer to constant data, constant pointer to nonconstant data.",
         "expanded_answer": "In C++, when passing a pointer to a function, you can qualify it with const in different ways, leading to four possible combinations of const-ness for the pointer and the data it points to. These combinations are: a non-constant pointer to non-constant data (both the pointer and the pointed data can be modified), a non-constant pointer to constant data (the pointer value can change to point to other locations, but the data it points to cannot be modified through this pointer), a constant pointer to non-constant data (the pointer is fixed to one memory address, but the data at that address can be changed), and a constant pointer to constant data (the pointer cannot change the location it refers to, nor can the data at that location be modified via the pointer). By choosing the appropriate const qualification for a pointer parameter, programmers can control whether the function is allowed to modify the pointer\u2019s target data, the pointer itself (i.e., what it points to), both, or neither.",
-        "timestamp": "2025-07-18T00:36:04.882075",
         "topics": [
             "Functions",
             "Memory_Pointers"
@@ -345,7 +313,6 @@
         "question": "What is a function pointer?",
         "desired_answer": "The address of the location in memory where the function code resides.",
         "expanded_answer": "In C/C++, a function pointer is a variable that holds the address of a function in memory (essentially pointing to the start of that function\u2019s executable code). Unlike pointers to data which reference memory locations holding values, a function pointer points to code, allowing you to indirectly call the function it points to. By assigning a function\u2019s address to a function pointer, you can invoke the function via the pointer (for example, using funcPtr() after proper assignment, as if it were a normal function call). Function pointers are useful for implementing callbacks or dynamic dispatch, since they enable passing functions as arguments to other functions or storing them for later invocation.",
-        "timestamp": "2025-07-18T00:36:04.882076",
         "topics": [
             "Functions",
             "Memory_Pointers"
@@ -356,7 +323,6 @@
         "question": "What is a linked list?",
         "desired_answer": "A collection of elements that can be allocated dynamically.",
         "expanded_answer": "A linked list is a dynamic data structure that consists of a sequence of nodes, where each node contains some data and a pointer (reference) to the next node in the sequence (and possibly a pointer to the previous node, in doubly-linked lists). Unlike an array, the elements of a linked list are not stored contiguously in memory; instead, each node is allocated separately, and the links (pointers) connect the nodes together in a chain. This dynamic allocation allows the linked list to grow or shrink easily by adding or removing nodes without needing to shift large blocks of data in memory. Linked lists provide flexible insertion and deletion operations (especially at the front of the list or after a known node), but accessing an element by index requires traversing nodes sequentially from the beginning of the list.",
-        "timestamp": "2025-07-18T00:36:04.882077",
         "topics": [
             "DataStructures",
             "DataStructures_LinkedLists",
@@ -368,7 +334,6 @@
         "question": "What is the main advantage of linked lists over arrays?",
         "desired_answer": "The linked lists can be of variable length.",
         "expanded_answer": "The main advantage of linked lists over arrays is their flexibility in size and easy adjustability. A linked list is not constrained by a fixed size\u2014because it is made up of nodes allocated dynamically, it can grow or shrink at runtime simply by adding or removing nodes, without needing to relocate or resize a large continuous block of memory. In contrast, a typical array has a fixed length (or requires a potentially expensive resizing operation to expand), which makes linked lists more suitable when the number of elements is unpredictable or changes frequently. Moreover, operations like insertion or deletion of elements (especially at the beginning or in the middle of the list) can be done efficiently in a linked list by adjusting pointers, whereas doing the same in an array may involve shifting many elements in memory.",
-        "timestamp": "2025-07-18T00:36:04.882077",
         "topics": [
             "DataStructures",
             "DataStructures_LinkedLists"
@@ -379,7 +344,6 @@
         "question": "What is the main advantage of arrays over linked lists?",
         "desired_answer": "The elements in an array can be accessed directly (as opposed to linked lists, which require iterative traversal).",
         "expanded_answer": "The main advantage of arrays is that they allow constant-time random access to elements, which is not possible with linked lists. Because the elements of an array are stored contiguously in memory, you can directly access any element by its index (e.g., array[i]) in O(1) time without having to traverse other elements. In contrast, accessing an arbitrary element in a linked list requires iterating through the list node by node up to that position, which is an O(n) operation in the worst case. Furthermore, the contiguous memory layout of arrays can lead to better cache utilization and overall faster access speeds, whereas linked lists involve pointer chasing which can be less cache-friendly.",
-        "timestamp": "2025-07-18T00:36:04.882078",
         "topics": [
             "DataStructures",
             "DataStructures_LinkedLists",
@@ -391,7 +355,6 @@
         "question": "How are linked lists passed as arguments to a function?",
         "desired_answer": "By reference.",
         "expanded_answer": "A linked list is typically passed to a function by providing a reference to its head node, rather than copying the entire list. In practice, this usually means passing a pointer to the first node of the list (the head) as the function argument. Because the function receives a pointer (or reference) to the head, it can use that to traverse or modify the nodes of the list directly. If the function might need to update the head of the list itself (for example, adding or removing an element at the front), the head pointer can be passed by reference (or as a pointer-to-pointer in C) so that any change to the head will be reflected outside the function as well.",
-        "timestamp": "2025-07-18T00:36:04.882079",
         "topics": [
             "DataStructures",
             "DataStructures_LinkedLists",
@@ -404,7 +367,6 @@
         "question": "What is the difference between a circular linked list and a basic linked list?",
         "desired_answer": "The last element in a circular linked list points to the head of the list.",
         "expanded_answer": "In a standard singly linked list, the last node contains a null pointer (null reference) to indicate the end of the list. By contrast, in a circular linked list, the last node\u2019s next pointer points back to the first node (head) of the list, thereby forming a closed loop or cycle. This means that if you traverse a circular linked list, you can keep moving from node to node and eventually you will return to your starting point (there is no null terminator to stop the traversal), whereas a basic linked list traversal will end when a null is encountered. Circular linked lists are useful in scenarios where one wants to cycle through the elements repeatedly (such as implementing round-robin scheduling or continuous ring buffers), because the structure naturally wraps around from the end back to the beginning.",
-        "timestamp": "2025-07-18T00:36:04.882079",
         "topics": [
             "DataStructures",
             "DataStructures_LinkedLists"
@@ -415,7 +377,6 @@
         "question": "What is the main advantage of a doubly-linked list over a basic linked list?",
         "desired_answer": "All the deletion and insertion operations can be performed in constant time, including those operations performed before a given location in the list or at the end of the list.",
         "expanded_answer": "A doubly-linked list provides two-way links (each node points to both its next and its previous neighbor), giving it an advantage over a basic singly-linked list for certain operations. Because of these bidirectional links, operations like deleting a node or inserting a new node before or after a given node can be performed in constant time (O(1)), as long as you have a reference to the relevant node. This includes efficient handling of operations at the end of the list or immediately before a specific location without needing to traverse the list to find the previous node (which would be necessary in a singly-linked list). In summary, the main advantage of a doubly-linked list is that all basic insertion and deletion operations (even at the list\u2019s end or before a certain node) can be done quickly in constant time due to the presence of backward pointers.",
-        "timestamp": "2025-07-18T00:36:04.882080",
         "topics": [
             "DataStructures",
             "DataStructures_LinkedLists",
@@ -427,7 +388,6 @@
         "question": "What is a stack?",
         "desired_answer": "A data structure that can store elements, which has the property that the last item added will be the first to be removed (or last-in-first-out)",
         "expanded_answer": "A stack is a fundamental data structure that stores elements in a last-in, first-out (LIFO) order. This means the last item that was added (pushed) onto the stack is the first one to be removed (popped), much like a stack of plates where you add or remove plates only from the top. A stack typically supports two primary operations: push (to add an element to the top of the stack) and pop (to remove the element from the top), and often a peek operation to view the top element without removing it. Stacks are used in many areas of computing (such as the call stack for managing function calls, or undo operations in applications) because their LIFO behavior naturally fits those scenarios.",
-        "timestamp": "2025-07-18T00:36:04.882081",
         "topics": [
             "DataStructures",
             "DataStructures_Stacks"
@@ -438,7 +398,6 @@
         "question": "What are the two main functions defined by a stack?",
         "desired_answer": "push and pop",
         "expanded_answer": "In a stack data structure, the two main operations are push and pop. The push operation adds (inserts) a new element to the top of the stack. The pop operation removes the element at the top of the stack (the last element that was pushed and not yet removed), and it often returns that element. These two functions enforce the stack\u2019s last-in, first-out behavior: push puts an item on top, and pop removes the most recently added item from the top.",
-        "timestamp": "2025-07-18T00:36:04.882082",
         "topics": [
             "DataStructures",
             "DataStructures_Stacks"
@@ -449,7 +408,6 @@
         "question": "How can you implement a stack with an array?",
         "desired_answer": "Keep the top of the stack toward the end of the array, so the push and pop operations will add or remove elements from the right side of the array.",
         "expanded_answer": "A stack can be implemented using an array by designating one end of the array as the top of the stack and using an index to keep track of the top position. Typically, we treat the end of the array (the highest index) as the top. Initially, the stack is empty (the top index might be set to -1, meaning no elements). To push an element, you increment the top index and place the new item in the array at that position; to pop, you remove the item at the current top index and then decrement the index. By adding and removing elements only at the end of the array, both push and pop operations execute in constant time and the stack\u2019s LIFO property is preserved.",
-        "timestamp": "2025-07-18T00:36:04.882082",
         "topics": [
             "DataStructures",
             "DataStructures_Stacks",
@@ -461,7 +419,6 @@
         "question": "How can you implement a stack with a list?",
         "desired_answer": "Keep the top of the stack pointing to the head of the linked list, so the push and pop operations will add or remove elements at the beginning of the list.",
         "expanded_answer": "A stack can be implemented using a linked list by using one end of the list as the top of the stack, specifically by treating the head of the list as the top. In this setup, the head pointer of the linked list always points to the top element of the stack. To push an item, you create a new node and insert it at the beginning of the list (updating the head to this new node), effectively placing the new element on top of the stack. To pop, you remove the node at the head of the list (the current top) and update the head pointer to the next node in the list. Both push and pop operations in this implementation operate at the head of the list and are therefore efficient (O(1)), preserving the LIFO property of the stack.",
-        "timestamp": "2025-07-18T00:36:04.882083",
         "topics": [
             "DataStructures",
             "DataStructures_Stacks",
@@ -473,7 +430,6 @@
         "question": "How are infix expressions evaluated by computers?",
         "desired_answer": "First, they are converted into postfix form, followed by an evaluation of the postfix expression.",
         "expanded_answer": "Computers generally evaluate infix arithmetic expressions (where operators are written between operands) by first converting the infix expression into a postfix expression (Reverse Polish Notation). In postfix form, the order of operations is made explicit because each operator comes after its operands, which removes the need for parentheses and simplifies the evaluation process. After this conversion, the computer evaluates the postfix expression using a stack-based algorithm: it scans the postfix sequence, pushing operands onto a stack, and when an operator is encountered, it pops the necessary operands, applies the operator to them, and pushes the result back onto the stack. This two-step approach\u2014conversion to postfix followed by stack-based evaluation\u2014allows the computer to compute the result of the original infix expression correctly and efficiently.",
-        "timestamp": "2025-07-18T00:36:04.882084",
         "topics": [
             "Algorithms",
             "Expression_Evaluation",
@@ -485,7 +441,6 @@
         "question": "What operations would you need to perform to find a given element on a stack?",
         "desired_answer": "Pop all the elements and store them on another stack until the element is found, then push back all the elements on the original stack.",
         "expanded_answer": "To find a given element in a stack, you would need to pop elements off the stack one by one until you either find the target element or run out of elements. As you pop each element from the original stack, you should store them (for example, by pushing them onto a second temporary stack) so that you don\u2019t lose them and can restore them later. If and when you find the desired element during this process, you stop removing elements. Finally, after the search, you push all the elements that were set aside on the temporary stack back onto the original stack in order to restore the stack to its initial order.",
-        "timestamp": "2025-07-18T00:36:04.882084",
         "topics": [
             "DataStructures",
             "DataStructures_Stacks",
@@ -497,7 +452,6 @@
         "question": "What is a queue?",
         "desired_answer": "A data structure that can store elements, which has the property that the last item added will be the last to be removed (or first-in-first-out).",
         "expanded_answer": "A queue is a fundamental data structure that stores elements in a first-in, first-out (FIFO) order. This means the element that is added earliest (first) to the queue will be the first one to be removed, much like a line of people where the person who arrives first is served first. A queue typically supports two main operations: enqueue, which adds an element to the back (rear) of the queue, and dequeue, which removes the element from the front of the queue. Because of its FIFO behavior, queues are used in many situations such as task scheduling, buffering, and managing requests where items need to be processed in the order they arrived.",
-        "timestamp": "2025-07-18T00:36:04.882085",
         "topics": [
             "DataStructures",
             "DataStructures_Queues"
@@ -508,7 +462,6 @@
         "question": "What are the two main functions defined by a queue?",
         "desired_answer": "enqueue and dequeue",
         "expanded_answer": "In a queue data structure, the two main operations are enqueue and dequeue. The enqueue operation adds a new element to the back (rear) of the queue. The dequeue operation removes an element from the front of the queue (taking out the oldest element that has been in the queue). These operations enforce the queue\u2019s first-in, first-out behavior: enqueue appends an item to the end of the line, and dequeue takes the item at the front (the one that arrived earliest) out of the queue.",
-        "timestamp": "2025-07-18T00:36:04.882086",
         "topics": [
             "DataStructures",
             "DataStructures_Queues"
@@ -519,7 +472,6 @@
         "question": "How can you implement a queue with an array?",
         "desired_answer": "Use a circular array. Keep the rear of the queue toward the end of the array, and the front toward the beginning, and allow the rear pointer to wrap around.",
         "expanded_answer": "A queue can be implemented with an array by using a circular buffer approach, which allows the front and rear of the queue to wrap around to the beginning of the array. You maintain two indices (or pointers): one for the front of the queue (the position of the next element to dequeue) and one for the rear of the queue (the position where the next element will be enqueued). Initially, both front and rear could start at 0 for an empty queue. To enqueue an element, you insert the element at the current rear index of the array and then advance the rear index by one (wrapping back to index 0 if the end of the array is reached). To dequeue, you take the element at the current front index and remove it, then advance the front index by one (also wrapping around if needed). By treating the array as circular in this way, the implementation efficiently uses array space without shifting elements, and both enqueue and dequeue operations run in O(1) time.",
-        "timestamp": "2025-07-18T00:36:04.882086",
         "topics": [
             "DataStructures",
             "DataStructures_Queues",
@@ -532,7 +484,6 @@
         "question": "How can you implement a queue with a list?",
         "desired_answer": "Keep the rear of the queue pointing to the tail of the linked list, so the enqueue operation is done at the end of the list, and keep the front of the queue pointing to the head of the linked list, so the dequeue operation is done at the beginning of the list.",
         "expanded_answer": "A queue can be implemented using a linked list by treating the head of the list as the front of the queue and the tail of the list as the rear. This typically involves maintaining two pointers: one pointing to the head of the linked list (the front of the queue) and one pointing to the tail of the list (the rear of the queue). To enqueue an element, you create a new node and attach it to the current tail, then update the tail pointer to this new node (thereby adding the element at the end of the queue in constant time). To dequeue, you remove the node at the head of the list and update the head pointer to the next node (removing the front element, also in constant time). By keeping track of both the head and tail, this linked-list implementation allows enqueue and dequeue operations to be performed efficiently without traversing the entire list.",
-        "timestamp": "2025-07-18T00:36:04.882087",
         "topics": [
             "DataStructures",
             "DataStructures_Queues",
@@ -544,7 +495,6 @@
         "question": "What is the stack operation corresponding to the enqueue operation in queues?",
         "desired_answer": "push",
         "expanded_answer": "In a stack, the operation that corresponds to a queue\u2019s enqueue operation (which adds an element to the queue) is the push operation. While enqueue adds an item to the rear end of a queue, a push adds a new item onto the top of a stack. Both operations are insertions into their respective data structures: enqueue inserts into a queue, and push inserts into a stack, following the stack\u2019s last-in, first-out scheme.",
-        "timestamp": "2025-07-18T00:36:04.882088",
         "topics": [
             "DataStructures",
             "DataStructures_Queues",
@@ -556,7 +506,6 @@
         "question": "What is a tree?",
         "desired_answer": "A collection of nodes, which has a special node called root, and the rest of the nodes are partitioned into one or more disjoint sets, each set being a tree.",
         "expanded_answer": "In computer science, a tree is a hierarchical data structure consisting of nodes, where one node is designated as the root of the tree and serves as the top of the hierarchy. The root node has no parent, and all other nodes in the tree are connected below the root, each node having exactly one parent (except the root) and zero or more child nodes. The remaining nodes of the tree can be seen as forming several smaller subtrees, each subtree being a tree in its own right with one of the root\u2019s children as its root (this is a recursive definition of a tree). Overall, a tree forms an acyclic, hierarchical structure that models relationships like those in a family tree or a file directory, with the root leading to various levels of descendants.",
-        "timestamp": "2025-07-18T00:36:04.882089",
         "topics": [
             "DataStructures",
             "DataStructures_Trees"
@@ -567,7 +516,6 @@
         "question": "What is the height of a tree?",
         "desired_answer": "The length of the longest path from the root to any of its leaves.",
         "expanded_answer": "The height of a tree is defined as the length of the longest path from the tree\u2019s root node down to any leaf node. In practice, this means finding the leaf that is furthest from the root (in terms of number of edges or levels) and counting how many edges lie on the path from the root to that leaf. That count of edges (alternatively, one less than the number of nodes on the longest root-to-leaf path) represents the height of the tree. For example, if the longest root-to-leaf path in a tree goes through 4 edges, the tree\u2019s height is 4. In a simple tree that consists of just a single node (only the root), the height is 0, since there are no edges from the root to a leaf.",
-        "timestamp": "2025-07-18T00:36:04.882089",
         "topics": [
             "DataStructures",
             "DataStructures_Trees",
@@ -579,7 +527,6 @@
         "question": "What is a leaf?",
         "desired_answer": "A node that has no children.",
         "expanded_answer": "In a tree data structure, a leaf (also known as a leaf node or terminal node) is a node that has no children. This means it does not branch out any further \u2014 it\u2019s an endpoint of a path in the tree. In other words, once you reach a leaf node, there are no more descendants to traverse downward from that node. Leaf nodes often represent the bottom level of the hierarchy, and in many cases they hold actual data values or outcomes, whereas internal nodes might represent intermediate categories or decisions.",
-        "timestamp": "2025-07-18T00:36:04.882090",
         "topics": [
             "DataStructures",
             "DataStructures_Trees"
@@ -590,7 +537,6 @@
         "question": "What is a binary tree?",
         "desired_answer": "A tree for which the maximum number of children per node is two.",
         "expanded_answer": "A binary tree is a tree data structure in which each node can have at most two children. Typically, these two child nodes are referred to as the left child and the right child. This means no node in a binary tree can have more than two immediate descendants (though it can have one or none), satisfying the binary (two-branch) condition. Binary trees are fundamental in computer science and underlie more specialized structures like binary search trees and binary heaps, where the left-right child structure is utilized for efficient operations.",
-        "timestamp": "2025-07-18T00:36:04.882091",
         "topics": [
             "DataStructures",
             "DataStructures_Trees"
@@ -601,7 +547,6 @@
         "question": "What is a binary search tree?",
         "desired_answer": "A binary tree that has the property that for any node the left child is smaller than the parent which in turn is smaller than the right child.",
         "expanded_answer": "A binary search tree (BST) is a type of binary tree that maintains an ordered structure among its elements. Specifically, for any given node in a BST, the value stored in that node is greater than every value in its left subtree and less than every value in its right subtree. This means the left child (and all nodes in the left subtree) hold values smaller than the node\u2019s value, and the right child (and all nodes in the right subtree) hold values greater than the node\u2019s value. This invariant holds throughout the tree and enables efficient searching, insertion, and deletion operations, as the tree can be traversed (going left or right) based on comparisons, achieving on average O(log n) time complexity for these operations in a balanced BST.",
-        "timestamp": "2025-07-18T00:36:04.882092",
         "topics": [
             "DataStructures",
             "DataStructures_Trees",
@@ -613,7 +558,6 @@
         "question": "What is the inorder traversal of a binary tree?",
         "desired_answer": "Traverse the left subtree, then the root, then the right subtree.",
         "expanded_answer": "Inorder traversal is a depth-first traversal method for binary trees where the nodes are visited in the order: left subtree, then root, then right subtree. Practically, this means that for each node in the tree, you first recursively traverse all the way down its left subtree (visiting those nodes in inorder), then process (visit) the current node itself, and finally traverse its right subtree in inorder. This systematic left-root-right visiting pattern has the important property that if the binary tree is a binary search tree, an inorder traversal will visit the nodes in ascending sorted order of their values. In general, inorder traversal ensures that each node is encountered after all nodes in its left subtree and before all nodes in its right subtree.",
-        "timestamp": "2025-07-18T00:36:04.882092",
         "topics": [
             "DataStructures",
             "DataStructures_Trees",
@@ -625,7 +569,6 @@
         "question": "How many comparisons does it take to find an element in a binary search tree?",
         "desired_answer": "The height of the tree (or log of the number of elements in the tree).",
         "expanded_answer": "The number of comparisons required to find an element in a binary search tree is proportional to the height of the tree. In the search process, you start at the root and compare the target value to the current node\u2019s value, then move left or right accordingly; each move down a level involves one comparison. In the worst case, you may have to go all the way from the root to a leaf without finding the element, which would be one comparison per level of the tree. If the tree has height h, this translates to up to h comparisons in the worst case. For a well-balanced tree, the height h is about log\u2082(n) (where n is the number of nodes), so the search would take on the order of log n comparisons on average. However, if the tree is highly unbalanced (e.g., resembling a linked list), its height could be n, making the worst-case search take O(n) comparisons.",
-        "timestamp": "2025-07-18T00:36:04.882093",
         "topics": [
             "DataStructures",
             "DataStructures_Trees",
@@ -638,7 +581,6 @@
         "question": "What are the elements typically included in a class definition?",
         "desired_answer": "Function members and data members.",
         "expanded_answer": "In a typical class definition, there are two primary kinds of elements: data members and member functions. Data members (also known as attributes or fields) are variables defined in the class that hold the state or properties each object of the class will have. Member functions (also called methods) are functions defined inside the class that specify the behaviors or operations that objects of the class can perform, often using or modifying the class\u2019s data members. Thus, a class encapsulates both data (in its data members) and functionality (in its member functions) within a single construct.",
-        "timestamp": "2025-07-18T00:36:04.882094",
         "topics": [
             "OOP"
         ]
@@ -648,7 +590,6 @@
         "question": "What are the access-specifiers that can be used in a C++ class definition?",
         "desired_answer": "Private and public.",
         "expanded_answer": "In C++, classes use access specifiers to control the visibility of their members, and the primary specifiers are private and public (with a third specifier, protected, used mainly for inheritance). Private members are accessible only within the class itself (and its friend functions or classes), meaning code outside the class cannot directly use or modify these members. Public members are accessible from any outside code, effectively forming the class\u2019s interface (they can be called or accessed by users of the class). (There is also a protected specifier, which allows access within the class and its derived subclasses but not from other external code; however, private and public are the fundamental access levels most commonly used in basic class definitions.)",
-        "timestamp": "2025-07-18T00:36:04.882094",
         "topics": [
             "OOP"
         ]
@@ -658,7 +599,6 @@
         "question": "How are objects initialized when they are created?",
         "desired_answer": "By using constructors.",
         "expanded_answer": "When an object of a class is created (instantiated), it is initialized by a special member function called a constructor. The constructor is automatically invoked at the moment the object comes into existence, and its job is to set up the initial state of the object. Depending on the context of creation, an appropriate constructor will be called (for example, a default constructor if no arguments are provided, a parameterized constructor if arguments are given, or a copy constructor if the object is being created from another object). In short, objects are initialized using constructors, which ensure that the object\u2019s data members start off with proper initial values or setup when the object is created.",
-        "timestamp": "2025-07-18T00:36:04.882095",
         "topics": [
             "OOP",
             "Functions"
@@ -669,7 +609,6 @@
         "question": "What is a function signature?",
         "desired_answer": "The name of the function and the list of parameters, including their types.",
         "expanded_answer": "A function signature is the combination of the function\u2019s name and its parameter list (including the number and types of parameters) that uniquely identifies the function. It essentially describes how the function can be called and distinguishes it from other functions (particularly important when you have function overloading). Typically, the return type of a function is not considered part of the signature in languages like C++, meaning you cannot have two functions that differ only by return type. Thus, if two functions have the same name and the same parameter types in the same scope, they share the same signature (and the language will consider that a redefinition or conflict).",
-        "timestamp": "2025-07-18T00:36:04.882096",
         "topics": [
             "Functions"
         ]
@@ -679,7 +618,6 @@
         "question": "What is a recursive function?",
         "desired_answer": "A function that calls itself.",
         "expanded_answer": "A recursive function is a function that calls itself during its execution. In practical terms, this means that within the body of the function, there is a call to the same function (often with a modified or smaller input), causing the function to repeat its behavior on a subset of the original problem. Recursion is a way to break a complex problem into simpler instances of the same problem: a recursive function typically has a base case (a stopping condition where it returns a result without calling itself) and a recursive case (where the function does call itself to work on a smaller subproblem). This self-referential approach is useful for solving problems that have a natural recursive structure, such as traversing nested data structures (like trees), computing factorials, Fibonacci numbers, or other mathematical sequences defined in terms of smaller subproblems.",
-        "timestamp": "2025-07-18T00:36:04.882096",
         "topics": [
             "Recursion",
             "Functions",
@@ -691,7 +629,6 @@
         "question": "What is the alternative way to solve a problem that could be solved through recursive functions?",
         "desired_answer": "Through iteration.",
         "expanded_answer": "The alternative to solving a problem with recursion is to use iteration (looping constructs). In practice, this means instead of a function calling itself repeatedly, you would use a looping structure (such as a for loop or while loop) to repeat the necessary steps until the problem is solved. An iterative solution may use explicit loop variables or data structures (like an explicit stack or queue) to manage the state that recursion would handle implicitly via the call stack. Many problems that have recursive solutions (like computing factorials, generating Fibonacci numbers, or traversing data structures) can also be solved iteratively by carefully using loops to achieve the same effect without the function calling itself.",
-        "timestamp": "2025-07-18T00:36:04.882097",
         "topics": [
             "Recursion",
             "Control_Flow"
@@ -702,7 +639,6 @@
         "question": "What is the difference between an array that is declared as static and one that is not?",
         "desired_answer": "The static arrays are intialized only once when the function is called.",
         "expanded_answer": "In C/C++, an array declared as static (for instance, as a static local variable inside a function) has static storage duration, which means it is allocated and initialized only once (when the program first encounters its declaration) and it retains its value between function calls. In contrast, a non-static array (a normal automatic local array) is allocated and initialized every time the function is called and is deallocated when the function returns. Because the static array persists throughout the execution of the program, if the function is called again, that static array still holds whatever values it had from the previous invocation (unless it was changed in the interim). In summary, a static array has a single, long lifetime with one-time initialization, whereas a non-static array is created afresh and initialized on every function call.",
-        "timestamp": "2025-07-18T00:36:04.882098",
         "topics": [
             "Arrays",
             "Variables_Scope_Storage",
@@ -714,7 +650,6 @@
         "question": "What is the main difference between a string of characters that is read into a variable of type string versus a variable of type char[]?",
         "desired_answer": "The char[] will automatically add a null \\0 character at the end of the string.",
         "expanded_answer": "When you read characters into a C-style string (a char[] array), the input routine will automatically append a null character ('\\0') at the end of the array of characters to mark the end of the string. In contrast, when reading into a C++ std::string object (of type string), you do not have to deal directly with the null terminator at all \u2013 the std::string manages its own internal character buffer and invisibly handles the terminating \\0. The main difference is that with a char[] you must ensure the array has space for this terminator and be aware of it, whereas with a std::string, the class automatically takes care of string termination and keeps track of the string\u2019s length. In other words, a char[] requires manual management of the null terminator (added automatically by input but the buffer must accommodate it), while a std::string abstracts that detail away and behaves more like a dynamic container of characters.",
-        "timestamp": "2025-07-18T00:36:04.882098",
         "topics": [
             "Strings",
             "Arrays",
@@ -726,7 +661,6 @@
         "question": "Briefly describe the divide-and-conquer paradigm.",
         "desired_answer": "Divide a problem into smaller subproblems, solve them recursively, and then combine the solutions into a solution for the original problem.",
         "expanded_answer": "Divide-and-conquer is an algorithm design paradigm that involves breaking a problem into smaller subproblems, solving each subproblem (often recursively), and then combining the results to address the original problem. The general process has three stages: divide the problem into several smaller (often similar) problems, conquer the subproblems by solving them recursively (eventually reaching a base case that can be solved directly), and combine the solutions of the subproblems to produce the solution for the original problem. This approach is employed by many efficient algorithms; for instance, merge sort uses divide-and-conquer by splitting an array into halves, sorting each half recursively, and then merging the sorted halves. The divide-and-conquer paradigm capitalizes on the idea that solving a collection of smaller problems can be easier or faster than solving the one big problem outright, especially when the subproblems are independent of each other.",
-        "timestamp": "2025-07-18T00:36:04.882099",
         "topics": [
             "Algorithms",
             "Algorithms_DivideConquer"
@@ -737,7 +671,6 @@
         "question": "Briefly describe in one sentence how does merge sort work?",
         "desired_answer": "It splits the original array into two, sorts each of the two halves, and then merges the sorted arrays.",
         "expanded_answer": "Merge sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm to sort an array or list. It works by recursively splitting the original array into two halves, sorting each of those halves (for example, via recursive merge sort calls on each half), and then merging the two sorted halves back together into one sorted array. In the merge step, because each half is already sorted, the algorithm efficiently combines them by repeatedly selecting the smaller of the two front elements of the halves and appending it to the result array, until all elements are merged in order. By the end of this process, the entire array is sorted. Merge sort runs in O(n log n) time complexity and is a stable sort, meaning it preserves the original order of equal elements while sorting.",
-        "timestamp": "2025-07-18T00:36:04.882100",
         "topics": [
             "Algorithms",
             "Algorithms_Sorting",
@@ -750,7 +683,6 @@
         "question": "What is the experimental approach for measuring the running time of an algorithm?",
         "desired_answer": "Implement the algorithm and measure the physical running time.",
         "expanded_answer": "The experimental approach to measuring an algorithm\u2019s running time involves implementing the algorithm and timing its execution on actual inputs. In other words, you write a program that carries out the algorithm and use a timing mechanism (such as a clock or built-in profiler) to measure how long the program takes to run for various input sizes or cases. By running the algorithm on different test inputs and recording the physical (wall-clock or CPU) time it takes to complete, you gather empirical data about its performance. This experimental method provides concrete measurements of running time on real hardware, which can be useful for validation, although it depends on the specific environment and inputs, unlike theoretical analysis which gives general performance estimates independent of any one machine.",
-        "timestamp": "2025-07-18T00:36:04.882101",
         "topics": [
             "Algorithms",
             "Performance_Analysis"
@@ -761,7 +693,6 @@
         "question": "Briefly, how does selection sort work?",
         "desired_answer": "It selects the minimum from an array and places it on the first position, then it selects the minimum from the rest of the array and places it on the second position, and so forth.",
         "expanded_answer": "Selection sort is a sorting algorithm that repeatedly finds the smallest element from the unsorted portion of the array and swaps it with the first element of that unsorted portion, gradually building a sorted section at the front of the array. To begin, it looks through the entire array to find the minimum value and swaps that value into the first position (index 0). Then it moves to the next position: it finds the smallest element in the remaining unsorted part of the array (from index 1 to the end) and swaps it into index 1. This process continues for each subsequent position (at step i, find the minimum from index i to the end and swap it with the element at index i) until the array is completely sorted.",
-        "timestamp": "2025-07-18T00:36:04.882101",
         "topics": [
             "Algorithms",
             "Algorithms_Sorting",
@@ -773,7 +704,6 @@
         "question": "What is the advantage of linked lists over arrays?",
         "desired_answer": "Linked lists are dynamic structures, which allow for a variable number of elements to be stored.",
         "expanded_answer": "The advantage of linked lists over arrays lies largely in their dynamic size and ease of insertion/deletion. Linked lists are dynamic structures, meaning they can grow or shrink at runtime by allocating or deallocating nodes as needed; you don\u2019t have to allocate a fixed-size block of memory in advance. This allows a linked list to store a variable number of elements and adjust its size flexibly without the overhead of resizing (no need to shift large portions of data, as might be required with an array). Additionally, operations like inserting or deleting elements in the middle of a linked list can be done efficiently by adjusting pointers (in constant time, if you already have a reference to the insertion/deletion point), whereas in an array these operations may involve moving many elements to accommodate the change.",
-        "timestamp": "2025-07-18T00:36:04.882102",
         "topics": [
             "DataStructures",
             "DataStructures_LinkedLists"
@@ -784,7 +714,6 @@
         "question": "What is a queue?",
         "desired_answer": "A data structure that stores elements following the first in first out principle. The main operations in a queue are enqueue and dequeue.",
         "expanded_answer": "A queue is a data structure that stores a collection of elements in first-in, first-out (FIFO) order. This means the element added earliest to the queue will be the first one removed, analogous to a line of people where the first person in line is served first. The main operations on a queue are enqueue (which adds an element to the back of the queue) and dequeue (which removes an element from the front of the queue). Often, queues also support a peek operation to look at the front element without removing it. Queues are used in many applications such as task scheduling, buffering of data streams, and breadth-first traversal of graphs, where it is important to process items in the order they arrived.",
-        "timestamp": "2025-07-18T00:36:04.882103",
         "topics": [
             "DataStructures",
             "DataStructures_Queues"
@@ -795,7 +724,6 @@
         "question": "What are the main operations associated with a stack?",
         "desired_answer": "push and pop",
         "expanded_answer": "In a stack (a last-in, first-out data structure), the main operations are push and pop. To push means to add a new element onto the top of the stack. To pop means to remove the element that is currently on top of the stack (which is the most recently pushed element that hasn\u2019t been removed yet). Together, push and pop allow the stack to grow and shrink while always enforcing that insertions and removals occur at the top of the stack (often a peek operation is also provided to look at the top element without removing it), thereby maintaining the LIFO behavior.",
-        "timestamp": "2025-07-18T00:36:04.882103",
         "topics": [
             "DataStructures",
             "DataStructures_Stacks"
@@ -806,7 +734,6 @@
         "question": "What is the Euler tour traversal of a tree?",
         "desired_answer": "A walk around the tree, starting with the root, where each node is seen three times: from the left, from below, from the right.",
         "expanded_answer": "An Euler tour traversal of a tree is a method of traversing the tree by imagining a walk around its structure, where each node is encountered three times: once coming from the left side, once from below (after visiting its children), and once from the right side. In practice, you can picture tracing the perimeter of the tree starting at the root and moving down the left edge; you \u2018visit\u2019 a node when you first arrive at it from above/left, then again after exploring its left subtree (when you are directly beneath it), and a third time as you depart to its right (after exploring its right subtree). This Euler tour captures the essence of all the standard depth-first traversals (preorder, inorder, postorder) in one sweep, since each node is touched in positions corresponding to those traversal orders during the tour. The result of an Euler tour traversal is a sequence of node visits that reflects this complete walk-around of the tree, listing each node at three points in the journey (from left, below, and right).",
-        "timestamp": "2025-07-18T00:36:04.882104",
         "topics": [
             "DataStructures",
             "DataStructures_Trees",
@@ -818,7 +745,6 @@
         "question": "How do you delete a node from a binary search tree?",
         "desired_answer": "Find the node, then replace it with the leftmost node from its right subtree (or the rightmost node from its left subtree).",
         "expanded_answer": "Deleting a node from a binary search tree (BST) involves handling three cases depending on the node\u2019s children. If the node is a leaf (no children), deletion is straightforward: simply remove the node and update its parent to no longer reference it. If the node has exactly one child, you delete the node by reconnecting its single child directly to the node\u2019s parent (bypassing the deleted node), thereby preserving the BST structure. If the node has two children, the deletion is handled by finding a replacement node that maintains the BST order. Typically, you find the node\u2019s in-order successor (the leftmost/minimum node in the right subtree) or alternatively the in-order predecessor (the rightmost/maximum node in the left subtree). You then copy the value from that successor/predecessor into the node to be deleted, and finally delete the successor/predecessor node (which will have at most one child, making its removal simpler). This way, the BST property is preserved after the deletion operation.",
-        "timestamp": "2025-07-18T00:36:04.882105",
         "topics": [
             "DataStructures",
             "DataStructures_Trees",
@@ -831,7 +757,6 @@
         "question": "How many steps does it take to search a node in a binary search tree?",
         "desired_answer": "The height of the tree.",
         "expanded_answer": "Searching for a node in a binary search tree (BST) generally requires a number of steps on the order of the tree\u2019s height. The search starts at the root and at each step it compares the target value to the current node\u2019s value and then moves down to either the left child or the right child, effectively going one level deeper with each comparison. In the worst case, if the node being searched for lies at the very bottom of the tree (or is not present, leading to reaching a leaf), the algorithm will make as many steps (node visits) as there are levels in the tree\u2014from the root down to the lowest leaf. Thus, the number of steps is equal to the height of the tree. In a balanced BST, this height is proportional to log\u2082(n) (so roughly log n steps for n nodes), while in a highly unbalanced BST the height could be n, leading to an O(n) steps in the worst case search.",
-        "timestamp": "2025-07-18T00:36:04.882106",
         "topics": [
             "DataStructures",
             "DataStructures_Trees",
