@@ -82,8 +82,7 @@ MERGE (o)-[:IN_TOPIC]->(t)
                     )
 
 
-# ── Main ────────────────────────────────────────────────────────────────────
-def main():
+def generate_kg():
     data = load_data(Path(TRIPLES_JSON_PATH))
     builder = KGBuilder(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
 
@@ -99,5 +98,3 @@ def main():
         builder.close()
 
 
-if __name__ == "__main__":
-    main()
