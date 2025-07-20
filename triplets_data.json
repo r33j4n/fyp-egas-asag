@@ -1,0 +1,806 @@
+[
+  {
+    "id": 1,
+    "topics": ["SW_Process"],
+    "triples": [
+      ["Prototype program", "IS_A", "Simplified early software version"],
+      ["Prototype program", "SIMULATES", "Key features of final product"],
+      ["Prototype program", "USED_IN", "Early problem-solving stages"],
+      ["Prototype program", "USED_FOR", "Validate requirements"],
+      ["Prototype program", "USED_FOR", "Gather user feedback"],
+      ["Prototype program", "REDUCES", "Development risk"]
+    ]
+  },
+  {
+    "id": 2,
+    "topics": ["SW_Process"],
+    "triples": [
+      ["Testing stage", "FEEDS_BACK_TO", "Coding phase"],
+      ["Testing stage", "FEEDS_BACK_TO", "Solution-refinement phase"],
+      ["Testing stage", "DISCOVERS", "Bugs"],
+      ["Bugs", "TRIGGER", "Code fixes"],
+      ["Testing outcomes", "INFORM", "Maintenance activities"]
+    ]
+  },
+  {
+    "id": 3,
+    "topics": ["OOP"],
+    "triples": [
+      ["Object-oriented programming", "PROVIDES", "Abstraction"],
+      ["Object-oriented programming", "PROVIDES", "Encapsulation"],
+      ["Object-oriented programming", "PROVIDES", "Reusability"],
+      ["Abstraction", "MANAGES", "Complexity"],
+      ["Encapsulation", "PROTECTS", "Object state"],
+      ["Reusability", "ACHIEVED_THROUGH", "Inheritance and polymorphism"]
+    ]
+  },
+  {
+    "id": 4,
+    "topics": ["Program_Structure"],
+    "triples": [
+      ["Execution", "BEGINS_AT", "main function"],
+      ["main function", "IS", "Entry point of program"],
+      ["Runtime", "CALLS", "main function"],
+      ["main function", "INITIATES", "Program logic"],
+      ["Program", "CALLS_FROM", "main function"]
+    ]
+  },
+  {
+    "id": 6,
+    "topics": ["Variables_Scope_Storage", "Program_Structure"],
+    "triples": [
+      ["Variables", "CAN_BE_DECLARED_IN", "functions or blocks"],
+      ["Variables", "CAN_BE_DECLARED_AT", "global scope"],
+      ["Local variables", "EXIST_ONLY_WITHIN", "their defining function or block"],
+      ["Global variables", "ARE_ACCESSIBLE_THROUGHOUT", "program after declaration"],
+      ["C++", "ALLOWS", "declaration at point of first use"],
+      ["Point-of-use declaration", "IMPROVES", "code clarity"]
+    ]
+  },
+  {
+    "id": 7,
+    "topics": ["Control_Flow"],
+    "triples": [
+      ["While loop", "TYPE", "pre-test loop"],
+      ["Do-while loop", "TYPE", "post-test loop"],
+      ["While loop", "CHECKS_CONDITION", "before executing body"],
+      ["Do-while loop", "EXECUTES_BODY", "before checking condition"],
+      ["Do-while loop", "GUARANTEES", "at least one body execution"],
+      ["While loop", "SKIPS_BODY_IF", "initial condition is false"]
+    ]
+  },
+  {
+    "id": 8,
+    "topics": ["OOP"],
+    "triples": [
+      ["Class definition", "INCLUDES", "Data members"],
+      ["Class definition", "INCLUDES", "Member functions"],
+      ["Data members", "HOLD", "object state"],
+      ["Member functions", "DEFINE", "object behaviors"],
+      ["Class", "ENCAPSULATES", "information and functionality"]
+    ]
+  },
+  {
+    "id": 9,
+    "topics": ["OOP", "Variables_Scope_Storage"],
+    "triples": [
+      ["Data member", "ACCESSIBLE_FROM", "any member function"],
+      ["Local variable", "ACCESSIBLE_FROM", "only its defining function"],
+      ["Data member", "REPRESENTS", "persistent object state"],
+      ["Local variable", "HAS_LIFETIME", "during function execution"],
+      ["Local variable", "IS", "temporary"],
+      ["Data member", "SHARED_BY", "all class methods"]
+    ]
+  },
+  {
+    "id": 10,
+    "topics": ["OOP", "Functions"],
+    "triples": [
+      ["Constructor", "CALLED_WHEN", "object is created"],
+      ["Function", "CALLED", "explicitly by code"],
+      ["Constructor", "HAS_RETURN_TYPE", "none"],
+      ["Function", "HAS_RETURN_TYPE", "specified type"],
+      ["Constructor", "INITIALIZES", "object state"],
+      ["Function", "PROVIDES", "object behavior"]
+    ]
+  },
+    {
+    "id": 11,
+    "topics": ["OOP"],
+    "triples": [
+      ["Compiler", "GENERATES", "default constructor when no user-defined constructor exists"],
+      ["Default constructor", "IS_A", "constructor with no parameters"],
+      ["Default constructor", "DEFAULT_INITIALIZES", "members and bases"],
+      ["User-defined constructor", "SUPPRESSES", "compiler-generated default constructor"],
+      ["Programmer", "MUST_DEFINE", "no-argument constructor when needed"]
+    ]
+  },
+  {
+    "id": 13,
+    "topics": ["Functions", "Program_Structure"],
+    "triples": [
+      ["Function prototype", "DECLARES", "function signature"],
+      ["Function prototype", "EXCLUDES", "function body"],
+      ["Function definition", "CONTAINS", "function body"],
+      ["Compiler", "USES", "function prototype for early calls"],
+      ["Function prototype", "INFORMS", "compiler about interface"]
+    ]
+  },
+  {
+    "id": 14,
+    "topics": ["OOP", "Program_Structure"],
+    "triples": [
+      ["Header file", "DECLARES", "class interface"],
+      ["Header file", "CONTAINS", "class definition skeleton"],
+      ["Header file", "CONTAINS", "member function prototypes"],
+      ["Header file", "SEPARATES", "interface from implementation"],
+      ["Source file", "CONTAINS", "function bodies"]
+    ]
+  },
+  {
+    "id": 15,
+    "topics": ["Functions"],
+    "triples": [
+      ["Function signature", "INCLUDES", "function name"],
+      ["Function signature", "INCLUDES", "parameter types"],
+      ["Function signature", "UNIQUELY_IDENTIFIES", "overloaded function"],
+      ["Return type", "NOT_PART_OF", "function signature"]
+    ]
+  },
+  {
+    "id": 16,
+    "topics": ["Variables_Scope_Storage", "Program_Structure"],
+    "triples": [
+      ["Global variable", "HAS_SCOPE", "entire file"],
+      ["Global variable", "ACCESSIBLE_FROM", "code after declaration"],
+      ["Global variable", "MAY_HAVE", "external linkage via extern"],
+      ["Local variable", "CONFINED_TO", "own function or block"]
+    ]
+  },
+  {
+    "id": 17,
+    "topics": ["Functions", "Performance_Analysis"],
+    "triples": [
+      ["Inline function", "SUBSTITUTES_WITH", "function body at call site"],
+      ["Inlining", "ELIMINATES", "function call overhead"],
+      ["Inlining", "INCREASES", "code size"],
+      ["Compiler", "COPIES", "inline function code into caller"]
+    ]
+  },
+  {
+    "id": 18,
+    "topics": ["Functions", "Memory_Pointers", "Performance_Analysis"],
+    "triples": [
+      ["Passing by reference", "AVOIDS", "copying large data structures"],
+      ["Argument passed by reference", "ACTS_AS", "alias to original data"],
+      ["Modifications via reference", "AFFECT", "original variable"],
+      ["Passing by reference", "IMPROVES", "performance"]
+    ]
+  },
+  {
+    "id": 19,
+    "topics": ["Functions"],
+    "triples": [
+      ["Compiler", "DIFFERENTIATES", "overloaded functions by signature"],
+      ["Overloaded functions", "SHARE", "function name"],
+      ["Parameter list", "DEFINES", "function signature"],
+      ["Function call", "MATCHES_TO", "closest signature"]
+    ]
+  },
+  {
+    "id": 20,
+    "topics": ["Recursion", "Control_Flow"],
+    "triples": [
+      ["Missing base case", "CAUSES", "infinite recursion"],
+      ["Incorrect recursive step", "CAUSES", "infinite recursion"],
+      ["Base case", "TERMINATES", "recursive function"],
+      ["Recursive function", "CALLS", "itself"]
+    ]
+  },
+  {
+    "id": 21,
+    "topics": ["Recursion", "Control_Flow"],
+    "triples": [
+      ["Iteration", "INVOLVES", "repetition"],
+      ["Recursion", "INVOLVES", "repetition"],
+      ["Iteration", "USES", "loop constructs"],
+      ["Recursion", "USES", "function calls"],
+      ["Iteration", "REQUIRES", "termination condition"],
+      ["Recursion", "REQUIRES", "base case"],
+      ["Missing termination condition", "LEADS_TO", "infinite loop"],
+      ["Missing base case", "LEADS_TO", "infinite recursion"]
+    ]
+  },
+  {
+    "id": 23,
+    "topics": ["Strings", "Arrays", "DataStructures"],
+    "triples": [
+      ["C-style string", "TERMINATES_WITH", "null character"],
+      ["std::string", "MANAGES", "length internally"],
+      ["std::string", "HANDLES", "null terminator automatically"],
+      ["C-style string", "REQUIRES", "manual null termination"],
+      ["std::string", "PROVIDES", "convenient abstraction"]
+    ]
+  },
+  {
+    "id": 24,
+    "topics": ["Arrays", "DataStructures", "Memory_Pointers"],
+    "triples": [
+      ["Array argument", "DECAYS_TO", "pointer to first element"],
+      ["Function parameter", "RECEIVES", "memory address of array data"],
+      ["Function", "CAN_MODIFY", "caller’s original array"],
+      ["Changes inside function", "REFLECT_IN", "original array"],
+      ["Array", "PASSED_WITH", "reference semantics"]
+    ]
+  },
+  {
+    "id": 25,
+    "topics": ["Arrays", "Variables_Scope_Storage", "DataStructures"],
+    "triples": [
+      ["Static array", "HAS_STORAGE_DURATION", "program lifetime"],
+      ["Static array", "INITIALIZED", "once"],
+      ["Automatic array", "ALLOCATED", "each function call"],
+      ["Automatic array", "DESTROYED", "on function return"],
+      ["Static array", "RETAINS", "values between calls"]
+    ]
+  },
+  {
+    "id": 26,
+    "topics": ["Arrays", "DataStructures"],
+    "triples": [
+      ["Passing multi-dimensional array", "REQUIRES", "sizes of all dimensions except first"],
+      ["First dimension", "UNSPECIFIED_IN", "function parameter"],
+      ["Compiler", "NEEDS", "remaining dimensions for indexing"],
+      ["Array", "DECAYS_TO", "pointer to sub-array"]
+    ]
+  },
+  {
+    "id": 27,
+    "topics": ["Algorithms", "Algorithms_Sorting", "Arrays"],
+    "triples": [
+      ["Insertion sort", "BUILDS", "sorted array incrementally"],
+      ["Insertion sort", "INSERTS", "current element into correct position"],
+      ["Algorithm", "SHIFTS", "larger elements rightward"],
+      ["Left side of array", "REMAINS", "sorted after each insertion"]
+    ]
+  },
+  {
+    "id": 28,
+    "topics": ["Algorithms", "Algorithms_Sorting"],
+    "triples": [
+      ["Selection sort", "FINDS", "minimum element in unsorted part"],
+      ["Selection sort", "SWAPS", "minimum element with first unsorted position"],
+      ["Sorted section", "EXPANDS", "left side of array"],
+      ["Selection sort", "REPEATS", "selection process for each index"]
+    ]
+  },
+  {
+    "id": 29,
+    "topics": ["Algorithms", "Algorithms_Sorting", "Performance_Analysis"],
+    "triples": [
+      ["Best-case scenario", "IS", "array already sorted"],
+      ["Insertion sort", "RUNS_IN", "linear time"],
+      ["Number of operations", "EQUALS", "N in best case"]
+    ]
+  },
+  {
+    "id": 30,
+    "topics": ["Algorithms", "Algorithms_Sorting", "Algorithms_DivideConquer", "Arrays"],
+    "triples": [
+      ["Base case", "OCCURS_WHEN", "sub-array size is 1"],
+      ["Recursive merge sort", "STOPS_DIVIDING", "at base case"],
+      ["Sub-array size 1", "CONSIDERED", "sorted"],
+      ["Merge sort", "STARTS_MERGING", "after reaching base case"]
+    ]
+  },
+    {
+    "id": 32,
+    "topics": ["Memory_Pointers"],
+    "triples": [
+      ["Address-of operator", "RETURNS", "memory address of operand"],
+      ["&x", "EVALUATES_TO", "pointer to x"],
+      ["Pointer", "REPRESENTS", "location in memory"],
+      ["& operator", "OBTAINS", "pointer to variable"],
+      ["Pointer", "CAN_BE_PASSED_TO", "functions"],
+      ["Pointer type", "INDICATES", "data type of referenced value"]
+    ]
+  },
+  {
+    "id": 34,
+    "topics": ["Memory_Pointers", "Arrays", "DataStructures"],
+    "triples": [
+      ["Array", "ACCESSED_WITH", "pointer arithmetic"],
+      ["Pointer", "INITIALIZED_TO", "first element of array"],
+      ["Element at index i", "OBTAINED_BY", "*(pointer + i)"],
+      ["array[i]", "EQUIVALENT_TO", "*(array + i)"],
+      ["Pointer arithmetic", "SHOWS_RELATION", "arrays and pointers"]
+    ]
+  },
+  {
+    "id": 35,
+    "topics": ["Memory_Pointers", "Performance_Analysis"],
+    "triples": [
+      ["sizeof operator", "RETURNS", "size in bytes of operand"],
+      ["sizeof(int)", "YIELDS", "compile-time constant"],
+      ["sizeof(array)", "CALCULATES", "total bytes used by array"],
+      ["Result of sizeof", "IS_OF_TYPE", "size_t"],
+      ["sizeof value", "USED_FOR", "memory allocation decisions"]
+    ]
+  },
+  {
+    "id": 36,
+    "topics": ["Functions", "Memory_Pointers"],
+    "triples": [
+      ["Pointer parameter", "CAN_BE", "nonconst pointer to nonconst data"],
+      ["Pointer parameter", "CAN_BE", "nonconst pointer to const data"],
+      ["Pointer parameter", "CAN_BE", "const pointer to nonconst data"],
+      ["Pointer parameter", "CAN_BE", "const pointer to const data"],
+      ["Const qualification", "CONTROLS", "modification rights on pointer or data"]
+    ]
+  },
+  {
+    "id": 37,
+    "topics": ["Functions", "Memory_Pointers"],
+    "triples": [
+      ["Function pointer", "STORES", "address of function"],
+      ["Function pointer", "POINTS_TO", "executable code"],
+      ["Function pointer", "ALLOWS", "indirect function call"],
+      ["Function pointer", "ENABLES", "callbacks"],
+      ["Invoking funcPtr()", "CALLS", "pointed function"]
+    ]
+  },
+  {
+    "id": 38,
+    "topics": ["DataStructures", "DataStructures_LinkedLists", "Memory_Pointers"],
+    "triples": [
+      ["Linked list", "CONSISTS_OF", "sequence of nodes"],
+      ["Node", "CONTAINS", "data and pointer to next"],
+      ["Linked list", "ALLOCATED", "dynamically"],
+      ["Linked list", "SUPPORTS", "flexible insertion and deletion"],
+      ["Indexed access", "REQUIRES", "sequential traversal"]
+    ]
+  },
+  {
+    "id": 39,
+    "topics": ["DataStructures", "DataStructures_LinkedLists"],
+    "triples": [
+      ["Linked lists", "ALLOW", "variable length"],
+      ["Linked lists", "GROW_OR_SHRINK", "at runtime"],
+      ["Arrays", "HAVE", "fixed length"],
+      ["Linked lists", "ENABLE", "efficient insertion and deletion"],
+      ["Arrays", "MAY_REQUIRE", "shifting elements to insert or delete"]
+    ]
+  },
+  {
+    "id": 40,
+    "topics": ["DataStructures", "DataStructures_LinkedLists", "Performance_Analysis"],
+    "triples": [
+      ["Arrays", "PROVIDE", "constant-time random access"],
+      ["Array elements", "STORED", "contiguously in memory"],
+      ["Linked lists", "REQUIRE", "iterative traversal for index access"],
+      ["Contiguous layout", "IMPROVES", "cache utilization"],
+      ["Array access", "OPERATES_IN", "O(1) time"]
+    ]
+  },
+  {
+    "id": 41,
+    "topics": ["DataStructures", "DataStructures_LinkedLists", "Functions", "Memory_Pointers"],
+    "triples": [
+      ["Linked list", "PASSED_BY", "reference to head node"],
+      ["Function", "RECEIVES", "pointer to head"],
+      ["Function", "CAN_MODIFY", "nodes directly"],
+      ["Updating head", "REQUIRES", "head pointer by reference"],
+      ["Passing pointer", "AVOIDS", "copying entire list"]
+    ]
+  },
+  {
+    "id": 42,
+    "topics": ["DataStructures", "DataStructures_LinkedLists"],
+    "triples": [
+      ["Circular linked list", "LAST_NODE_POINTS_TO", "head"],
+      ["Basic linked list", "LAST_NODE_POINTS_TO", "null"],
+      ["Circular linked list", "FORMS", "closed loop"],
+      ["Traversal of circular list", "RETURNS_TO", "starting node"],
+      ["Circular lists", "USED_FOR", "round-robin scheduling"]
+    ]
+  },
+  {
+    "id": 43,
+    "topics": ["DataStructures", "DataStructures_LinkedLists", "Performance_Analysis"],
+    "triples": [
+      ["Doubly-linked list", "HAS_POINTER_TO", "next node"],
+      ["Doubly-linked list", "HAS_POINTER_TO", "previous node"],
+      ["Doubly-linked list", "SUPPORTS_O1", "insert before or after given node"],
+      ["Doubly-linked list", "SUPPORTS_O1", "delete given node with reference"],
+      ["Backward pointer", "ELIMINATES", "need to traverse for previous node"],
+      ["Doubly-linked list", "EFFICIENCY_ADVANTAGE_OVER", "singly-linked list for insert/delete"]
+    ]
+  },
+  {
+    "id": 45,
+    "topics": ["DataStructures", "DataStructures_Stacks"],
+    "triples": [
+      ["Stack", "IS_A", "LIFO data structure"],
+      ["Stack", "TOP_ELEMENT", "last item pushed"],
+      ["Stack", "SUPPORTS_OPERATION", "push"],
+      ["Stack", "SUPPORTS_OPERATION", "pop"],
+      ["Stack", "OPTIONAL_OPERATION", "peek"],
+      ["Call stack", "USES_STRUCTURE", "stack"]
+    ]
+  },
+  {
+    "id": 46,
+    "topics": ["DataStructures", "DataStructures_Stacks"],
+    "triples": [
+      ["Push", "ADDS_TO", "top of stack"],
+      ["Pop", "REMOVES_FROM", "top of stack"],
+      ["Push_and_pop", "ENFORCE", "LIFO order"],
+      ["Pop", "RETURNS", "removed top element"]
+    ]
+  },
+  {
+    "id": 47,
+    "topics": ["DataStructures", "DataStructures_Stacks", "Arrays"],
+    "triples": [
+      ["Array-based stack", "TRACKS", "top index"],
+      ["Push", "INCREMENTS", "top index and stores element"],
+      ["Pop", "DECREMENTS", "top index and removes element"],
+      ["Array-based stack", "OPERATIONS_IN", "O(1) time"],
+      ["Array-based stack", "TOP_AT", "end of array"],
+      ["Array-based stack", "LIMITED_BY", "array capacity"]
+    ]
+  },
+  {
+    "id": 48,
+    "topics": ["DataStructures", "DataStructures_Stacks", "DataStructures_LinkedLists"],
+    "triples": [
+      ["List-based stack", "TOP_AT", "head node"],
+      ["Push", "INSERTS_AT", "head of list"],
+      ["Pop", "REMOVES_FROM", "head of list"],
+      ["List-based stack", "OPERATIONS_IN", "O(1) time"],
+      ["List-based stack", "USES", "linked list nodes"]
+    ]
+  },
+  {
+    "id": 49,
+    "topics": ["Algorithms", "Expression_Evaluation", "DataStructures_Stacks"],
+    "triples": [
+      ["Infix expression", "CONVERTS_TO", "postfix expression"],
+      ["Postfix expression", "EVALUATED_WITH", "stack algorithm"],
+      ["Postfix form", "ELIMINATES", "need for parentheses"],
+      ["Evaluation algorithm", "PUSHES", "operands onto stack"],
+      ["Operator", "POPS", "operands applies operation pushes result"]
+    ]
+  },
+  {
+    "id": 50,
+    "topics": ["DataStructures", "DataStructures_Stacks", "Functions"],
+    "triples": [
+      ["Finding element in stack", "REQUIRES", "popping elements sequentially"],
+      ["Popped elements", "STORED_IN", "temporary stack"],
+      ["Target found", "STOP_POPPING", "original stack"],
+      ["Temporary stack", "RESTORED_TO", "original stack after search"],
+      ["Stack search", "DESTRUCTIVE_UNTIL_FOUND", "then restore"]
+    ]
+  },
+  {
+    "id": 51,
+    "topics": ["DataStructures", "DataStructures_Queues"],
+    "triples": [
+      ["Queue", "IS_A", "FIFO data structure"],
+      ["Enqueue", "ADDS_TO", "rear of queue"],
+      ["Dequeue", "REMOVES_FROM", "front of queue"],
+      ["Queue", "USED_FOR", "task scheduling"],
+      ["Queue", "USED_FOR", "buffering requests"]
+    ]
+  },
+  {
+    "id": 52,
+    "topics": ["DataStructures", "DataStructures_Queues"],
+    "triples": [
+      ["Enqueue", "INSERTS_AT", "rear of queue"],
+      ["Dequeue", "REMOVES_FROM", "front of queue"],
+      ["Enqueue_and_dequeue", "ENFORCE", "FIFO order"],
+      ["Dequeue", "RETURNS", "oldest element"]
+    ]
+  },
+  {
+    "id": 53,
+    "topics": ["DataStructures", "DataStructures_Queues", "Arrays", "Performance_Analysis"],
+    "triples": [
+      ["Array-based queue", "IMPLEMENTED_AS", "circular buffer"],
+      ["Queue", "TRACKS", "front index"],
+      ["Queue", "TRACKS", "rear index"],
+      ["Rear index", "WRAPS_AROUND", "array end"],
+      ["Circular queue", "AVOIDS", "shifting elements"],
+      ["Circular queue", "OPERATIONS_IN", "O(1) time"]
+    ]
+  },
+  {
+    "id": 54,
+    "topics": ["DataStructures", "DataStructures_Queues", "DataStructures_LinkedLists"],
+    "triples": [
+      ["Queue", "IMPLEMENTED_WITH", "linked list"],
+      ["Head pointer", "REPRESENTS", "front of queue"],
+      ["Tail pointer", "REPRESENTS", "rear of queue"],
+      ["Enqueue", "ADDS_NODE_AT", "tail"],
+      ["Dequeue", "REMOVES_NODE_FROM", "head"],
+      ["Enqueue_and_dequeue", "OPERATE_IN", "O(1) time"],
+      ["Linked-list queue", "MAINTAINS", "head and tail pointers"]
+    ]
+  },
+  {
+    "id": 55,
+    "topics": ["DataStructures", "DataStructures_Queues", "DataStructures_Stacks"],
+    "triples": [
+      ["Enqueue", "CORRESPONDS_TO", "push"],
+      ["Push", "INSERTS_AT", "top of stack"],
+      ["Enqueue", "INSERTS_AT", "rear of queue"],
+      ["Push_and_enqueue", "ARE", "insertion operations"]
+    ]
+  },
+  {
+    "id": 56,
+    "topics": ["DataStructures", "DataStructures_Trees"],
+    "triples": [
+      ["Tree", "IS", "hierarchical data structure"],
+      ["Tree", "CONTAINS", "root node"],
+      ["Root node", "HAS_PARENT", "none"],
+      ["Non-root node", "HAS_PARENT", "exactly one"],
+      ["Tree", "PARTITIONED_INTO", "subtrees"],
+      ["Tree", "IS_ACYCLIC", "true"]
+    ]
+  },
+  {
+    "id": 57,
+    "topics": ["DataStructures", "DataStructures_Trees", "Performance_Analysis"],
+    "triples": [
+      ["Tree height", "DEFINED_AS", "longest root-to-leaf path"],
+      ["Height", "MEASURED_IN", "edges"],
+      ["Single-node tree", "HAS_HEIGHT", "0"],
+      ["Greater depth", "INCREASES", "height value"]
+    ]
+  },
+  {
+    "id": 58,
+    "topics": ["DataStructures", "DataStructures_Trees"],
+    "triples": [
+      ["Leaf node", "HAS", "no children"],
+      ["Leaf node", "KNOWN_AS", "terminal node"],
+      ["Leaf nodes", "LOCATED_AT", "bottom level of tree"]
+    ]
+  },
+  {
+    "id": 59,
+    "topics": ["DataStructures", "DataStructures_Trees"],
+    "triples": [
+      ["Binary tree", "LIMITS_CHILDREN_TO", "two"],
+      ["Left child", "IS_POSITION", "first subordinate"],
+      ["Right child", "IS_POSITION", "second subordinate"],
+      ["Binary tree", "SPECIALIZES", "general tree"]
+    ]
+  },
+  {
+    "id": 60,
+    "topics": ["DataStructures", "DataStructures_Trees", "Algorithms_Searching"],
+    "triples": [
+      ["Binary search tree", "IS_A", "binary tree"],
+      ["Left subtree", "CONTAINS_VALUES", "less than parent"],
+      ["Right subtree", "CONTAINS_VALUES", "greater than parent"],
+      ["BST property", "ENABLES", "efficient search insertion deletion"]
+    ]
+  },
+  {
+    "id": 61,
+    "topics": ["DataStructures", "DataStructures_Trees", "Algorithms_Traversal"],
+    "triples": [
+      ["Inorder traversal", "VISITS", "left subtree then root then right subtree"],
+      ["Inorder traversal", "IS_TYPE", "depth-first traversal"],
+      ["Inorder traversal of BST", "PRODUCES", "ascending order"]
+    ]
+  },
+  {
+    "id": 62,
+    "topics": ["DataStructures", "DataStructures_Trees", "Algorithms_Searching", "Performance_Analysis"],
+    "triples": [
+      ["BST search comparisons", "EQUAL", "tree height"],
+      ["Balanced BST", "HAS_HEIGHT", "log n"],
+      ["Unbalanced BST", "HAS_HEIGHT", "n"],
+      ["More height", "INCREASES", "search comparisons"]
+    ]
+  },
+  {
+    "id": 63,
+    "topics": ["OOP"],
+    "triples": [
+      ["Class definition", "INCLUDES", "data members"],
+      ["Class definition", "INCLUDES", "member functions"],
+      ["Class", "ENCAPSULATES", "data and behavior"]
+    ]
+  },
+  {
+    "id": 64,
+    "topics": ["OOP"],
+    "triples": [
+      ["C++ class", "USES_ACCESS_SPECIFIER", "private"],
+      ["C++ class", "USES_ACCESS_SPECIFIER", "public"],
+      ["Private members", "ACCESSIBLE_FROM", "inside class only"],
+      ["Public members", "ACCESSIBLE_FROM", "outside code"],
+      ["Protected specifier", "USED_FOR", "inheritance"]
+    ]
+  },
+  {
+    "id": 65,
+    "topics": ["OOP", "Functions"],
+    "triples": [
+      ["Object", "INITIALIZED_BY", "constructor"],
+      ["Constructor", "INVOKED_AT", "object creation"],
+      ["Default constructor", "CALLED_WHEN", "no arguments provided"],
+      ["Parameterized constructor", "CALLED_WITH", "arguments"],
+      ["Copy constructor", "CALLED_FOR", "copying another object"],
+      ["Constructor", "SETS_UP", "initial state of object"]
+    ]
+  },
+  {
+    "id": 66,
+    "topics": ["Functions"],
+    "triples": [
+      ["Function signature", "INCLUDES", "function name"],
+      ["Function signature", "INCLUDES", "parameter list and types"],
+      ["Function signature", "UNIQUELY_IDENTIFIES", "overloaded function"],
+      ["Return type", "NOT_PART_OF", "signature for overload resolution"],
+      ["Identical signatures", "CAUSE", "redefinition conflict"]
+    ]
+  },
+  {
+    "id": 67,
+    "topics": ["Recursion", "Functions", "Control_Flow"],
+    "triples": [
+      ["Recursive function", "CALLS", "itself"],
+      ["Recursive process", "REQUIRES", "base case"],
+      ["Recursive case", "SOLVES", "smaller subproblem"],
+      ["Recursion", "BREAKS_DOWN", "complex problem"],
+      ["Recursion", "CAN_TRAVERSE", "nested data structures"]
+    ]
+  },
+  {
+    "id": 68,
+    "topics": ["Recursion", "Control_Flow"],
+    "triples": [
+      ["Iterative solution", "USES", "loop constructs"],
+      ["Iteration", "REPLACES", "recursive calls"],
+      ["Iterative approach", "MANAGES_STATE_WITH", "explicit variables or stacks"],
+      ["Iteration", "AVOIDS", "call-stack overhead"],
+      ["Many recursive problems", "SOLVABLE_WITH", "iteration"]
+    ]
+  },
+  {
+    "id": 69,
+    "topics": ["Arrays", "Variables_Scope_Storage", "DataStructures"],
+    "triples": [
+      ["Static array", "ALLOCATED", "once during program lifetime"],
+      ["Static array", "RETAINS", "values between function calls"],
+      ["Automatic array", "ALLOCATED", "each function invocation"],
+      ["Automatic array", "DESTROYED", "on function return"],
+      ["Static storage duration", "PROVIDES", "persistent state"]
+    ]
+  },
+  {
+    "id": 70,
+    "topics": ["Strings", "Arrays", "DataStructures"],
+    "triples": [
+      ["C-style string", "ENDS_WITH", "null '\\0' character"],
+      ["std::string", "MANAGES", "null terminator internally"],
+      ["char[]", "REQUIRES", "manual buffer space for '\\0'"],
+      ["std::string", "TRACKS", "length automatically"],
+      ["std::string", "ABSTRACTS", "low-level memory details"]
+    ]
+  },
+  {
+    "id": 71,
+    "topics": ["Algorithms", "Algorithms_DivideConquer"],
+    "triples": [
+      ["Divide-and-conquer", "DIVIDES", "problem into subproblems"],
+      ["Subproblems", "SOLVED_BY", "recursive calls"],
+      ["Partial solutions", "COMBINED_INTO", "overall solution"],
+      ["Divide-and-conquer", "EMPLOYED_BY", "merge sort"],
+      ["Independent subproblems", "ENABLE", "parallel or efficient solving"]
+    ]
+  },
+  {
+    "id": 72,
+    "topics": ["Algorithms", "Algorithms_Sorting", "Algorithms_DivideConquer", "Arrays"],
+    "triples": [
+      ["Merge sort", "SPLITS", "array into two halves"],
+      ["Each half", "SORTED_BY", "recursive merge sort"],
+      ["Merge step", "COMBINES", "two sorted halves"],
+      ["Merge sort", "RUNS_IN", "O(n log n) time"],
+      ["Merge sort", "IS", "stable sorting algorithm"]
+    ]
+  },
+ {
+    "id": 74,
+    "topics": ["Algorithms", "Performance_Analysis"],
+    "triples": [
+      ["Experimental approach", "IMPLEMENTS", "algorithm"],
+      ["Experimental approach", "MEASURES", "physical running time"],
+      ["Program", "TIMED_WITH", "clock or profiler"],
+      ["Execution time", "RECORDED_FOR", "various input sizes"],
+      ["Experimental data", "VALIDATES", "performance predictions"],
+      ["Physical timing", "DEPENDENT_ON", "hardware and inputs"]
+    ]
+  },
+  {
+    "id": 75,
+    "topics": ["Algorithms", "Algorithms_Sorting", "Arrays"],
+    "triples": [
+      ["Selection sort", "FINDS", "minimum element in unsorted portion"],
+      ["Minimum element", "SWAPPED_WITH", "first unsorted position"],
+      ["Sorted section", "EXPANDS", "front of array"],
+      ["Selection sort", "REPEATS", "scan-and-swap for every index"]
+    ]
+  },
+  {
+    "id": 76,
+    "topics": ["DataStructures", "DataStructures_LinkedLists"],
+    "triples": [
+      ["Linked list", "HAS", "dynamic size"],
+      ["Linked list", "SUPPORTS", "efficient insertion/deletion"],
+      ["Array", "REQUIRES", "fixed size or costly resize"],
+      ["Linked list insertion", "ADJUSTS", "pointers in O(1) time"]
+    ]
+  },
+  {
+    "id": 77,
+    "topics": ["DataStructures", "DataStructures_Queues"],
+    "triples": [
+      ["Queue", "IS_A", "FIFO structure"],
+      ["Enqueue", "ADDS_TO", "rear of queue"],
+      ["Dequeue", "REMOVES_FROM", "front of queue"],
+      ["Queue", "USED_FOR", "task scheduling"],
+      ["Queue", "USED_FOR", "buffering data streams"]
+    ]
+  },
+  {
+    "id": 78,
+    "topics": ["DataStructures", "DataStructures_Stacks"],
+    "triples": [
+      ["Stack", "MAIN_OPERATION", "push"],
+      ["Stack", "MAIN_OPERATION", "pop"],
+      ["Push", "INSERTS_AT", "top of stack"],
+      ["Pop", "REMOVES_FROM", "top of stack"],
+      ["Stack operations", "ENFORCE", "LIFO order"]
+    ]
+  },
+  {
+    "id": 79,
+    "topics": ["DataStructures", "DataStructures_Trees", "Algorithms_Traversal"],
+    "triples": [
+      ["Euler tour traversal", "VISITS_EACH_NODE", "three times"],
+      ["Node visit", "OCCURS_FROM", "left, below, right"],
+      ["Euler tour", "COMBINES", "preorder inorder postorder positions"],
+      ["Euler tour", "WALKS_AROUND", "tree perimeter"]
+    ]
+  },
+  {
+    "id": 80,
+    "topics": ["DataStructures", "DataStructures_Trees", "Algorithms_Searching", "Functions"],
+    "triples": [
+      ["BST deletion", "HANDLES_CASE", "leaf node removal"],
+      ["BST deletion", "HANDLES_CASE", "node with one child"],
+      ["BST deletion", "HANDLES_CASE", "node with two children"],
+      ["In-order successor", "REPLACES", "node with two children"],
+      ["Successor node", "HAS_AT_MOST", "one child after replacement"]
+    ]
+  },
+  {
+    "id": 81,
+    "topics": ["DataStructures", "DataStructures_Trees", "Algorithms_Searching", "Performance_Analysis"],
+    "triples": [
+      ["BST search steps", "EQUAL_TO", "tree height"],
+      ["Balanced BST", "HAS_HEIGHT", "log n"],
+      ["Unbalanced BST", "HAS_HEIGHT", "n"],
+      ["More height", "INCREASES", "number of comparisons"]
+    ]
+  }
+]
