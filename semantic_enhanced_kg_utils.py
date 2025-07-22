@@ -1,4 +1,6 @@
 # semantic_enhanced_kg_utils.py
+import pickle
+
 from neo4j import GraphDatabase
 import os
 from typing import Dict, List, Optional, Tuple
@@ -15,6 +17,15 @@ driver = GraphDatabase.driver(NEO_URI, auth=(NEO_USER, NEO_PW))
 
 # Initialize sentence transformer for semantic similarity
 semantic_model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Load adaptive threshold model if available
+ADAPTIVE_MODEL = None
+try:
+    with open('adaptive_thresholder_handler_dir/adaptive_threshold_model.pkl', 'rb') as f:
+        ADAPTIVE_MODEL = pickle.load(f)
+    print("✅ Adaptive threshold model loaded successfully")
+except:
+    print("⚠️ Adaptive threshold model not found, using fixed threshold")
 
 
 class SemanticGraphQueryBuilder:
@@ -45,8 +56,12 @@ class SemanticGraphQueryBuilder:
             return [record["rel_type"] for record in result]
 
     @staticmethod
-    def find_similar_concepts(query_concept: str, threshold: float = 0.7) -> List[Tuple[str, float]]:
-        """Find semantically similar concepts using embeddings and fuzzy matching"""
+    def find_similar_concepts(query_concept: str, threshold: float = 0.7,
+                              use_adaptive: bool = False) -> List[Tuple[str, float]]:
+        """
+        Find semantically similar concepts using embeddings and fuzzy matching
+        NEW: use_adaptive parameter to enable adaptive thresholding
+        """
         all_concepts = SemanticGraphQueryBuilder.get_all_concepts()
 
         if not all_concepts:
@@ -56,32 +71,52 @@ class SemanticGraphQueryBuilder:
         query_embedding = semantic_model.encode(query_concept.lower())
         concept_embeddings = semantic_model.encode([c.lower() for c in all_concepts])
 
-        # Calculate cosine similarities and convert to native Python float
+        # Calculate cosine similarities
         similarities = np.dot(concept_embeddings, query_embedding) / (
                 np.linalg.norm(concept_embeddings, axis=1) * np.linalg.norm(query_embedding)
         )
-        similarities = similarities.astype(float)  # Convert to native Python float
+        similarities = similarities.astype(float)
 
-        # Also calculate fuzzy string matching scores
+        # Calculate fuzzy string matching scores
         fuzzy_scores = [
             jellyfish.jaro_winkler_similarity(query_concept.lower(), concept.lower())
             for concept in all_concepts
         ]
 
-        # Combine semantic and fuzzy scores (weighted average)
+        # Combine semantic and fuzzy scores
         combined_scores = [
-            float(0.7 * sem_score + 0.3 * fuzzy_score)  # Ensure float conversion
+            float(0.7 * sem_score + 0.3 * fuzzy_score)
             for sem_score, fuzzy_score in zip(similarities, fuzzy_scores)
         ]
 
-        # Filter and sort results
-        results = [
-            (concept, float(score))  # Ensure float conversion
+        # Create initial candidates list
+        all_candidates = [
+            (concept, float(score))
             for concept, score in zip(all_concepts, combined_scores)
-            if score >= threshold
         ]
 
-        return sorted(results, key=lambda x: x[1], reverse=True)
+        # Sort by score
+        all_candidates.sort(key=lambda x: x[1], reverse=True)
+
+        # ADAPTIVE THRESHOLD LOGIC
+        if use_adaptive and ADAPTIVE_MODEL is not None:
+            # Use adaptive threshold
+            final_threshold = _get_adaptive_threshold(query_concept, all_candidates)
+            print(f"🎯 Adaptive threshold for '{query_concept}': {final_threshold:.3f}")
+        else:
+            # Use fixed threshold
+            final_threshold = threshold
+            if use_adaptive:
+                print(f"⚠️ Adaptive model not available, using fixed threshold: {final_threshold:.3f}")
+
+        # Filter results based on final threshold
+        results = [
+            (concept, score)
+            for concept, score in all_candidates
+            if score >= final_threshold
+        ]
+
+        return results
 
     @staticmethod
     def find_similar_relationships(query_rels: List[str]) -> List[str]:
@@ -173,9 +208,11 @@ class SemanticGraphQueryBuilder:
 
 def get_subgraph_semantic(concept: str, hops: int, limit: int,
                           query_type: str = "neighborhood",
-                          use_semantic_matching: bool = True) -> Optional[Dict]:
+                          use_semantic_matching: bool = True,
+                          use_adaptive_threshold: bool = False) -> Optional[Dict]:
     """
     Enhanced subgraph retrieval with semantic concept matching
+    NEW: use_adaptive_threshold parameter
     """
     # Validate parameters
     hops = max(1, min(hops, 10))
@@ -188,7 +225,12 @@ def get_subgraph_semantic(concept: str, hops: int, limit: int,
 
     # If no exact match and semantic matching enabled, find similar concepts
     if use_semantic_matching:
-        similar_concepts = SemanticGraphQueryBuilder.find_similar_concepts(concept)
+        # Use adaptive threshold if enabled
+        similar_concepts = SemanticGraphQueryBuilder.find_similar_concepts(
+            concept,
+            threshold=0.7,  # This will be overridden if adaptive is enabled
+            use_adaptive=use_adaptive_threshold
+        )
 
         if similar_concepts:
             # Try the most similar concept
@@ -202,7 +244,8 @@ def get_subgraph_semantic(concept: str, hops: int, limit: int,
                     "original": concept,
                     "matched": best_match,
                     "score": score,
-                    "alternatives": similar_concepts[1:5]  # Top 5 alternatives
+                    "alternatives": similar_concepts[1:5],
+                    "adaptive_threshold_used": use_adaptive_threshold
                 }
                 return result
 
@@ -241,14 +284,24 @@ def _try_exact_match(concept: str, hops: int, limit: int, query_type: str) -> Op
 
 
 # Wrapper function for easy migration
+
 def get_subgraph_enhanced(concept: str, hops: int = 2, limit: int = 10,
                           query_type: str = "neighborhood",
-                          use_semantic: bool = True) -> Optional[Dict]:
+                          use_semantic: bool = True,
+                          use_adaptive: bool = False) -> Optional[Dict]:
     """
     Enhanced version with semantic understanding
-    Falls back to original if semantic matching fails
+    NEW: use_adaptive parameter for adaptive thresholding
+
+    Parameters:
+        use_semantic: Enable semantic matching (default: True)
+        use_adaptive: Enable adaptive threshold (default: False)
     """
-    result = get_subgraph_semantic(concept, hops, limit, query_type, use_semantic)
+    result = get_subgraph_semantic(
+        concept, hops, limit, query_type,
+        use_semantic,
+        use_adaptive  # NEW parameter
+    )
 
     if not result and not use_semantic:
         # Fall back to original implementation
@@ -256,4 +309,39 @@ def get_subgraph_enhanced(concept: str, hops: int = 2, limit: int = 10,
         result = get_subgraph_dynamic(concept, hops, limit, query_type)
 
     return result
+
+
+def _get_adaptive_threshold(query: str, candidates: List[Tuple[str, float]]) -> float:
+    """
+    Calculate adaptive threshold using the trained model
+    """
+    if not ADAPTIVE_MODEL or not candidates:
+        return 0.7  # Default fallback
+
+    try:
+        # Extract features using the model's method
+        features = ADAPTIVE_MODEL.extract_features(query, candidates)
+
+        # Test different thresholds to find the best one
+        best_threshold = 0.7
+        best_prob = 0
+
+        feature_cols = sorted(features.keys())
+
+        for test_threshold in np.arange(0.4, 0.9, 0.05):
+            features['threshold'] = test_threshold
+            feature_vector = [features[k] for k in sorted(features.keys())]
+
+            # Get probability that this threshold is good
+            prob = ADAPTIVE_MODEL.classifier.predict_proba([feature_vector])[0, 1]
+
+            if prob > best_prob:
+                best_prob = prob
+                best_threshold = test_threshold
+
+        return float(best_threshold)
+
+    except Exception as e:
+        print(f"❌ Error in adaptive threshold: {e}")
+        return 0.7  # Fallback to default
 

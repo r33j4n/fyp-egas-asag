@@ -101,7 +101,8 @@ def generate_questions_v2():
     question_count = data.get("question_count", 1)
     query_type = data.get("query_type", "neighborhood")
     question_types = data.get("question_types", ["factual"])
-    use_semantic = data.get("use_semantic", True)  # NEW: Enable semantic matching
+    use_semantic = data.get("use_semantic", True)
+    use_adaptive = data.get("use_adaptive", False)  # NEW PARAMETER
 
     # Validate inputs
     if not concepts:
@@ -113,15 +114,23 @@ def generate_questions_v2():
         concept_result = {"concept": concept}
 
         # Get subgraph with semantic matching
-        tree = get_subgraph_enhanced(concept, hops, limit, query_type, use_semantic)
+        tree = get_subgraph_enhanced(
+            concept, hops, limit, query_type,
+            use_semantic,
+            use_adaptive  # Pass the adaptive flag
+        )
 
         if not tree:
             # If no match found, provide suggestions
             if use_semantic:
-                suggestions = SemanticGraphQueryBuilder.find_similar_concepts(concept, threshold=0.5)
+                suggestions = SemanticGraphQueryBuilder.find_similar_concepts(
+                    concept,
+                    threshold=0.5,
+                    use_adaptive=use_adaptive  # Use adaptive here too
+                )
                 concept_result["error"] = f"No subgraph found for concept '{concept}'"
                 concept_result["suggestions"] = [
-                    {"concept": c, "similarity": float(s)}  # Explicit float conversion
+                    {"concept": c, "similarity": float(s)}
                     for c, s in suggestions[:5]
                 ]
             else:
@@ -133,15 +142,7 @@ def generate_questions_v2():
 
         # Add semantic match info if available
         if "semantic_match" in tree:
-            semantic_match = tree["semantic_match"]
-            # Ensure all numerical values are native Python floats
-            if "score" in semantic_match:
-                semantic_match["score"] = float(semantic_match["score"])
-            if "alternatives" in semantic_match:
-                semantic_match["alternatives"] = [
-                    (c, float(s)) for c, s in semantic_match["alternatives"]
-                ]
-            concept_result["semantic_match"] = semantic_match
+            concept_result["semantic_match"] = tree["semantic_match"]
 
         # Convert to sentences
         paragraph = triples_to_sentences(tree)
@@ -199,6 +200,19 @@ def available_features_v2():
             "relationship_expansion": "Automatically includes similar relationship types",
             "concept_suggestions": "Provides alternatives when no exact match found"
         }
+    })
+
+
+# Add new endpoint to check adaptive threshold status
+@app.route('/adaptive_status', methods=['GET'])
+def adaptive_status():
+    """Check if adaptive threshold model is loaded"""
+    from semantic_enhanced_kg_utils import ADAPTIVE_MODEL
+
+    return jsonify({
+        "adaptive_model_loaded": ADAPTIVE_MODEL is not None,
+        "default_threshold": 0.7,
+        "message": "Adaptive threshold available" if ADAPTIVE_MODEL else "Using fixed threshold"
     })
 
 
